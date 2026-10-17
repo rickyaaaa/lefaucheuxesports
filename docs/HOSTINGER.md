@@ -21,7 +21,7 @@ the last successful deployment branch intact.
 - Provider/repository: GitHub, `rickyaaaa/lefaucheuxesports` only.
 - Branch: `hostinger`.
 - Website root: `public_html` for the requested domain.
-- Auto deployment: enable after the first successful preview/verification.
+- Auto deployment: active; Hostinger watches `hostinger`, not `main`.
 - No server-side Node build/start command is needed for this compiled branch.
 
 The deployed branch contains `index.html`, `_astro/`, page directories and
@@ -29,32 +29,34 @@ The deployed branch contains `index.html`, `_astro/`, page directories and
 or `node_modules/`. The server configuration uses `index.html` and serves
 `404.html` with a 404 status; there is no SPA rewrite.
 
-## Current hosting inspection — 17 October 2026
+## Deployment status — 17 October 2026
 
-The authenticated hPanel showed Cloud Startup Hosting. Before deployment, File
-Manager showed only `default.php` in this domain's `public_html`; no WordPress
-installation was present in that folder. The public domain was still serving
-an older WordPress homepage from Hostinger CDN cache.
+The site runs on Cloud Startup Hosting. The user resolved the stalled GitHub
+authorization by reinstalling the Hostinger GitHub app. The repository is now
+connected in hPanel and automatic deployment is active.
 
-GitHub repository access was approved and saved for
-`rickyaaaa/lefaucheuxesports` only. The existing Hostinger app installation is
-`145144803`. However, the hPanel connection did not complete: the popup returned
-to the app's installation settings, and closing it returned hPanel to its
-Connect button. Automatic Hostinger Git deployment remains **unconfigured**.
-Do not broaden repository access or uninstall the account-wide app to retry.
+The initial Git connection deployed `main` directly and the domain returned
+403 because the source tree has no root `index.html`. The site-specific
+repository connection was recreated with branch `hostinger` and root
+`public_html`; the GitHub provider authorization was retained. hPanel confirmed
+deployment completed at 22:49 Asia/Jakarta, and the HTTPS homepage returned 200.
 
-The site was deployed manually from the compiled `hostinger` branch commit
-`e268ddd5dc03540eebfe4014fc6cabf1777fed54`, built from source commit
-`a71376418a8f86e41d92f29c2d0a4b97149b40c9`. A Git archive of that deployment was
-uploaded and extracted directly into `public_html` with overwrite disabled.
-The existing `default.php` was retained; the temporary upload archive was moved
-to Trash. The CDN cache was flushed for this domain only.
+Automatic delivery was verified with content-preserving deployment commit
+`b249f9d8777b7e8db934d0e59e98ebc0b5553cd6`. Without a manual redeploy, hPanel
+reported that exact commit successfully deployed from `hostinger` at 22:52.
+All eight main pages, both sitemaps, representative CSS and division images
+returned 200 over HTTPS. A missing path returned 404; `/package.json` and
+`/astro.config.mjs` also returned 404 after the source deployment was replaced.
 
-HTTPS verification confirmed the Astro homepage and all seven other main pages
-returned 200, both sitemap files returned 200, representative CSS and both
-division images loaded, and a nonexistent path returned 404. The homepage was
-also checked visually in the browser. Until Git connection is repaired, pushing
-to `main` updates the compiled branch but does **not** update the live site.
+The deployed build originates from source commit
+`a71376418a8f86e41d92f29c2d0a4b97149b40c9`. The same build had previously been
+uploaded manually while OAuth was blocked, and the domain's older WordPress CDN
+cache was flushed. That manual fallback is no longer the update mechanism.
+
+Normal delivery is now: push source to `main`, GitHub Actions checks/builds the
+site and updates `hostinger`, then Hostinger deploys that branch. A source change
+that produces identical build output does not create another deployment commit.
+Keep `main` out of the hosting document root.
 
 ## Acceptance and recovery
 
