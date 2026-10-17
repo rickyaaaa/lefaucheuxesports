@@ -1,0 +1,128 @@
+---
+
+import Atmosphere from '../components/Atmosphere.astro';
+
+import { Image } from 'astro:assets';
+
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import EsportsHero from '../components/EsportsHero.astro';
+
+import PlayerCard from '../components/PlayerCard.astro';
+
+import AchievementCard from '../components/AchievementCard.astro';
+
+import JoinBanner from '../components/JoinBanner.astro';
+
+import { players, achievements } from '../data/content';
+
+import SingaporeLineup from '../components/SingaporeLineup.astro';
+
+import ladies from '../assets/team/ladies-lineup.png';
+
+const roster = (division: 'mpl-sg' | 'id-ladies') => players.filter(player => player.published && player.division === division).sort((a,b) => a.sortOrder-b.sortOrder);
+
+const ladiesResults = achievements.filter(result => result.published && result.division === 'id-ladies');
+
+---
+
+<BaseLayout title="Esports" description="Meet the MPL Singapore and MLBB Ladies Indonesia rosters of Lefaucheux Esports, and discover our documented tournament results.">
+
+  <EsportsHero />
+
+  <section class="section team-section" id="mpl-sg" aria-labelledby="singapore-heading">
+
+    <Atmosphere variant="signal" />
+
+    <div class="container team-container">
+
+      <header class="team-heading">
+
+        <div class="singapore-group"><SingaporeLineup /></div>
+
+        <h2 id="singapore-heading">MPL <span class="crimson">SINGAPORE.</span></h2>
+
+        <p>Mobile Legends: Bang Bang</p>
+
+      </header>
+
+      <div class="player-grid team-roster">{roster('mpl-sg').map(player => <PlayerCard player={player} />)}</div>
+
+
+
+    </div>
+
+  </section>
+
+  <section class="section team-section ladies-section" id="id-ladies" aria-labelledby="ladies-heading">
+
+    <Atmosphere variant="weave" />
+
+    <div class="container team-container">
+
+      <header class="team-heading">
+
+        <Image class="team-group ladies-group" src={ladies} alt="LFX MLBB Ladies Indonesia together in official team jerseys" widths={[400,650,900]} sizes="(max-width: 600px) 85vw, 480px" />
+
+        <h2 id="ladies-heading">MLBB <span class="crimson">LADIES.</span></h2>
+
+        <p>Indonesia · Mobile Legends: Bang Bang</p>
+
+      </header>
+
+      <div class="player-grid team-roster">{roster('id-ladies').map(player => <PlayerCard player={player} />)}</div>
+
+      {ladiesResults.length > 0 && <section class="team-achievements" aria-labelledby="ladies-achievements-heading">
+
+        <h3 id="ladies-achievements-heading">OUR <span class="crimson">ACHIEVEMENTS.</span></h3>
+
+        <div class="achievement-list">{ladiesResults.map(achievement => <AchievementCard achievement={achievement} />)}</div>
+
+      </section>}
+
+    </div>
+
+  </section>
+
+  <JoinBanner />
+
+</BaseLayout>
+
+<style>
+
+  .team-container{max-width:1080px}
+
+  .team-heading{text-align:center;margin-bottom:40px}
+
+  .team-group{width:100%;object-fit:contain;object-position:center bottom;margin:0 auto 28px}
+
+  .singapore-group{width:100%;max-width:480px;margin:0 auto 28px}
+
+  .ladies-group{height:240px;max-width:480px}
+
+  .team-heading p{margin:16px auto 0;font-size:13px}
+
+  .team-roster{display:flex;justify-content:center;flex-wrap:wrap;gap:20px}
+
+  .team-roster :global(.player-card){width:calc((100% - 40px)/3);flex:none}
+
+
+
+
+
+  .ladies-section{background:var(--color-ink);border-top:1px solid var(--color-border-dark)}
+
+  .team-achievements{margin-top:64px;padding-top:48px;border-top:1px solid var(--color-border-dark);text-align:center}
+
+  .team-achievements>h3{margin-bottom:36px}
+
+  .achievement-list{display:flex;justify-content:center;flex-wrap:wrap;gap:40px}
+
+  @media(max-width:1024px){.team-roster :global(.player-card){width:calc((100% - 20px)/2)}}
+
+  @media(max-width:767px){.team-roster{gap:12px}.team-roster :global(.player-card){width:calc((100% - 12px)/2)}.team-heading{margin-bottom:32px}.ladies-group{height:180px}.team-heading h2{font-size:34px}.team-achievements{margin-top:48px;padding-top:36px}.team-achievements>h3{font-size:25px;margin-bottom:28px}}
+
+  @media(max-width:360px){.team-roster :global(.player-card){width:100%}}
+
+</style>
+

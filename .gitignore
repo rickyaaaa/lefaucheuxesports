@@ -1,0 +1,27 @@
+node_modules/
+dist/
+.astro/
+.source-*
+.impeccable/review/
+playwright-report/
+test-results/
+.env
+tmp/
+
+# Local secrets and machine files
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
+*.log
+
+# Original client deliveries and internal evidence; shipping assets live in src/assets
+/PNG (*)/
+/mlbb ladies/
+/docs/sources/
+/docs/COMPANY-PROFILE.md
+/*.png
+/prd (8).md
+/design (1).md
+/codex_prompt.md
+/.impeccable/references/

@@ -1,0 +1,10 @@
+---
+import { Image } from 'astro:assets';
+import type { Player } from '../data/content';
+interface Props { player: Player }
+const { player } = Astro.props;
+const divisionName = player.division === 'mpl-sg' ? 'LFX MPL Singapore' : 'LFX ID Ladies';
+---
+<figure class="player-card"><div class="player-photo"><span class="player-watermark" aria-hidden="true">LFX</span><Image src={player.image} alt={player.nickname ? `${player.nickname}, ${divisionName} player in the official team jersey` : `${divisionName} player in the official crimson and black jersey`} widths={[240,400,600]} sizes="(max-width: 360px) 90vw, (max-width: 1024px) 45vw, 30vw" /></div><figcaption><strong>{player.nickname ?? divisionName.toUpperCase()}</strong>{player.role && <span>{player.role}</span>}</figcaption></figure>
+<style>.player-card{margin:0;background:var(--color-surface-3);border:1px solid var(--color-border-dark);border-radius:var(--radius-card);overflow:hidden;position:relative;transition:border-color 350ms}.player-photo{position:relative;aspect-ratio:3/3.6;overflow:hidden;background:linear-gradient(145deg,#271822,#171a28)}.player-photo img{position:absolute;height:100%;width:100%;object-fit:contain;object-position:center bottom;transition:transform 600ms var(--ease-lfx);transform-origin:center bottom}.player-watermark{font-family:var(--font-display);font-size:clamp(80px,13vw,180px);position:absolute;color:#ffffff05;left:12px;top:28px}.player-card:hover{border-color:var(--color-crimson)}.player-card:hover img{transform:scale(1.055)}figcaption{position:relative;text-align:center;padding:24px;background:var(--color-ink)}figcaption:after{content:'';position:absolute;bottom:0;left:0;height:3px;width:100%;background:var(--color-crimson);transform:scaleX(0);transform-origin:left;transition:transform 350ms}.player-card:hover figcaption:after{transform:scaleX(1)}figcaption strong{display:block;font-family:var(--font-display);font-weight:400;font-size:25px}figcaption span{color:var(--color-text-muted);font-size:11px;display:block;margin-top:7px}@media(max-width:600px){figcaption{padding:18px 12px}figcaption strong{font-size:19px}figcaption span{font-size:11px}}</style>
+

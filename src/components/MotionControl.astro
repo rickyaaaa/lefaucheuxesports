@@ -1,0 +1,30 @@
+<button class="motion-control" type="button" aria-pressed="false" hidden>
+  <svg class="pause-icon" width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="M5 3v10M11 3v10" fill="none" stroke="currentColor" stroke-width="2" /></svg>
+  <svg class="play-icon" width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><path d="m5 3 8 5-8 5Z" fill="currentColor" /></svg>
+  <span>Pause motion</span>
+</button>
+<script>
+  const control=document.querySelector<HTMLButtonElement>('.motion-control');
+  const preference=matchMedia('(prefers-reduced-motion: reduce)');
+  let paused=false;
+  try{paused=sessionStorage.getItem('lfx-motion')==='paused';}catch{/* Storage is optional. */}
+  function applyPreference(){
+    document.body.dataset.motion=paused||preference.matches?'paused':'playing';
+    if(!control)return;
+    control.hidden=preference.matches;
+    control.setAttribute('aria-pressed',String(paused));
+    const label=control.querySelector('span');if(label)label.textContent=paused?'Resume motion':'Pause motion';
+  }
+  control?.addEventListener('click',()=>{paused=!paused;try{sessionStorage.setItem('lfx-motion',paused?'paused':'playing');}catch{/* Storage is optional. */}applyPreference();});
+  preference.addEventListener('change',applyPreference);applyPreference();
+  const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>entry.target.classList.toggle('is-inview',entry.isIntersecting));},{rootMargin:'0px',threshold:0});
+  document.querySelectorAll('.ambience').forEach(layer=>observer.observe(layer));
+  const updateVisibility=()=>{document.body.dataset.pageHidden=String(document.hidden);};
+  document.addEventListener('visibilitychange',updateVisibility);updateVisibility();
+</script>
+<style>
+  .motion-control{position:fixed;right:20px;bottom:18px;z-index:40;display:flex;align-items:center;gap:9px;min-height:42px;padding:10px 14px;background:var(--color-ink);border:1px solid #ffffff36;border-radius:3px;color:#e8e7ed;font-size:11px;box-shadow:0 6px 20px #0003}
+  .motion-control:hover{border-color:var(--color-crimson)}.play-icon{display:none}.motion-control[aria-pressed='true'] .pause-icon{display:none}.motion-control[aria-pressed='true'] .play-icon{display:block}
+  @media(max-width:767px){.motion-control{right:12px;bottom:12px;padding:10px;font-size:10px}}
+  @media(prefers-reduced-motion:reduce){.motion-control{display:none}}
+</style>

@@ -1,0 +1,25 @@
+---
+import { Image } from 'astro:assets';
+import type { Achievement } from '../data/content';
+interface Props { achievement: Achievement; showDivision?: boolean }
+const { achievement, showDivision = false } = Astro.props;
+---
+<figure class:list={['achievement-card', `achievement-${achievement.imageKind}`]}>
+  <div class="achievement-art"><Image src={achievement.image} alt={achievement.imageAlt} widths={[320,500,800]} sizes="(max-width: 600px) 80vw, 360px" /></div>
+  <figcaption>
+    <h3>{achievement.event} {achievement.year}</h3>
+    <p class="placement" lang="id">{achievement.placementLabel}</p>
+    {showDivision && <p class="division">{achievement.division === 'id-ladies' ? 'MLBB Ladies Indonesia' : 'MPL Singapore'}</p>}
+  </figcaption>
+</figure>
+<style>
+  .achievement-card{margin:0 auto;width:100%;max-width:380px;text-align:center}
+  .achievement-art{height:240px;display:flex;align-items:center;justify-content:center}
+  .achievement-art img{width:100%;max-height:100%;object-fit:contain}
+  .achievement-logo .achievement-art img{max-width:240px}
+  figcaption{margin-top:24px}
+  h3{font-size:28px}
+  .placement{font-size:20px;color:var(--color-white);margin:10px auto 0}
+  .division{font-size:13px;margin:12px auto 0}
+  @media(max-width:600px){.achievement-art{height:210px}h3{font-size:25px}}
+</style>

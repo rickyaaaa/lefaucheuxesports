@@ -1,0 +1,33 @@
+---
+import { getImage } from 'astro:assets';
+import jersey from '../assets/brand/jersey-detail.png';
+import logo from '../assets/brand/lfx-logo.webp';
+interface Props { variant?: 'signal' | 'weave' | 'arena' | 'light' }
+const { variant = 'signal' } = Astro.props;
+const texture = await getImage({ src: jersey, width: 1000, format: 'webp', quality: 75 });
+const mark = await getImage({ src: logo, width: 600, format: 'webp' });
+---
+<div class:list={['ambience', `ambience--${variant}`]} aria-hidden="true">
+  <div class="ambience-texture" style={{backgroundImage: `url(${texture.src})`}}></div>
+  <div class="ambience-logo" style={{backgroundImage: `url(${mark.src})`}}></div>
+  <svg class="ambience-lines" viewBox="0 0 1440 700" preserveAspectRatio="xMidYMid slice" fill="none">
+    <path class="ambience-plane" d="M1120-180h170L875 880H705z" fill="currentColor" />
+    <path class="ambience-track" d="M1290-180 875 880M1330-180 915 880M-120 540H190L390 60H580" stroke="currentColor" stroke-width="1" />
+    <path class="ambience-trace" d="M1290-180 875 880" stroke="currentColor" stroke-width="2" pathLength="100" />
+    <path class="ambience-bracket" d="M68 530v42h42m1220-444h42v42" stroke="currentColor" stroke-width="2" />
+  </svg>
+  <div class="ambience-crosses"><i></i><i></i><i></i></div>
+</div>
+<style>
+  .ambience{position:absolute;inset:0;overflow:hidden;z-index:-1;pointer-events:none;color:var(--color-crimson);contain:paint}
+  .ambience-lines{position:absolute;inset:0;width:100%;height:100%}.ambience-plane{opacity:.065}.ambience-track{opacity:.27}.ambience-bracket{opacity:.35}.ambience-trace{opacity:.7;stroke-dasharray:8 92;stroke-dashoffset:35;animation:none}
+  .ambience-texture{position:absolute;inset:0 0 0 45%;background-size:cover;background-position:center;opacity:.11;mask-image:linear-gradient(90deg,transparent,#000)}
+  .ambience-logo{position:absolute;width:min(44vw,600px);height:92%;right:-3%;top:4%;background-size:contain;background-position:center;background-repeat:no-repeat;opacity:.035;transform:rotate(-9deg)}
+  .ambience-crosses{display:flex;gap:12px;position:absolute;right:5%;bottom:9%;opacity:.4}.ambience-crosses i{position:relative;width:8px;height:8px}.ambience-crosses i:before,.ambience-crosses i:after{content:'';position:absolute;background:currentColor}.ambience-crosses i:before{width:8px;height:1px;top:3px}.ambience-crosses i:after{height:8px;width:1px;left:3px}
+  .ambience--weave .ambience-texture{inset:0;opacity:.09;mask-image:linear-gradient(90deg,#000,transparent 68%);background-size:cover;background-position:left center}
+  .ambience--weave .ambience-lines{transform:scaleX(-1)}.ambience--weave .ambience-logo{opacity:0}.ambience--weave .ambience-trace{animation:none}
+  .ambience--arena .ambience-texture{inset:0;opacity:.18;mask-image:linear-gradient(90deg,transparent,#000 80%)}.ambience--arena .ambience-plane{opacity:.12}.ambience--arena .ambience-logo{opacity:.06}
+  .ambience--light .ambience-texture,.ambience--light .ambience-logo{display:none}.ambience--light .ambience-plane{opacity:.04}.ambience--light .ambience-track{opacity:.14}.ambience--light .ambience-trace{animation:none}.ambience--light .ambience-bracket{opacity:.3}
+  @media(max-width:767px){.ambience-lines{width:180%;left:-80%}.ambience-texture{inset:0 0 0 15%;opacity:.08}.ambience-logo{width:75vw;right:-20%;opacity:.03}.ambience-crosses{right:6%;bottom:4%}.ambience--arena .ambience-texture{opacity:.12}.ambience-track{opacity:.2}}
+  @media(prefers-reduced-motion:reduce){.ambience-trace{animation:none;stroke-dashoffset:35;opacity:.4}}
+</style>

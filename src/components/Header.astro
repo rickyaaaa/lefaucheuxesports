@@ -1,0 +1,36 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../assets/brand/lfx-logo.webp';
+import { navigation } from '../data/site';
+const path = Astro.url.pathname;
+---
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label="Lefaucheux Esports home"><Image src={logo} width={88} alt="Lefaucheux Esports" loading="eager" /></a>
+    <button class="menu-toggle" aria-controls="main-navigation" aria-expanded="false" aria-label="Open navigation"><span></span><span></span></button>
+    <nav id="main-navigation" aria-label="Main navigation">{navigation.map(([name, href]) => <a href={href} aria-current={path === href || (href === '/news/' && path.startsWith('/news/')) ? 'page' : undefined} class:list={{'nav-join': href === '/join-us/'}}>{name}</a>)}</nav>
+  </div>
+</header>
+<script>
+  const toggle = document.querySelector<HTMLButtonElement>('.menu-toggle');
+  const nav = document.querySelector<HTMLElement>('#main-navigation');
+  function closeMenu(restore = false) {
+    toggle?.setAttribute('aria-expanded', 'false'); toggle?.setAttribute('aria-label', 'Open navigation');
+    nav?.classList.remove('is-open'); if (restore) toggle?.focus();
+  }
+  toggle?.addEventListener('click', () => {
+    const open = toggle.getAttribute('aria-expanded') !== 'true';
+    toggle.setAttribute('aria-expanded', String(open)); toggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+    nav?.classList.toggle('is-open', open);
+  });
+  document.addEventListener('keydown', event => { if (event.key === 'Escape' && toggle?.getAttribute('aria-expanded') === 'true') closeMenu(true); });
+  nav?.querySelectorAll('a').forEach(link => link.addEventListener('click', () => closeMenu()));
+  document.addEventListener('click', event => { if (!(event.target as Element).closest('.site-header')) closeMenu(); });
+  matchMedia('(min-width: 1100px)').addEventListener('change', () => closeMenu());
+</script>
+<style>
+  .site-header{position:sticky;top:0;background:var(--color-ink);z-index:50;border-bottom:1px solid var(--color-border-dark)}
+  .header-inner{height:88px;display:flex;align-items:center;justify-content:space-between;gap:36px}.brand{display:flex;align-items:center;flex-shrink:0}.brand img{width:84px;height:68px;object-fit:contain}
+  nav{display:flex;align-items:center;gap:25px}nav a{font-size:11px;font-weight:700;letter-spacing:.045em;text-transform:uppercase;white-space:nowrap;padding:16px 0;position:relative}nav a:hover,nav a[aria-current]{color:var(--color-crimson-hover)}nav a[aria-current]:after{content:'';height:2px;background:var(--color-crimson);position:absolute;bottom:4px;left:0;right:0}.nav-join{border:1px solid #782034;padding:12px 19px}.menu-toggle{display:none}
+  @media(max-width:1099px){.header-inner{height:76px}.brand img{width:72px;height:60px}.menu-toggle{display:grid;align-content:center;gap:7px;width:46px;height:46px;border:1px solid #49313a;background:transparent;padding:12px;color:white}.menu-toggle span{height:2px;background:currentColor;width:100%}nav{display:none;position:absolute;top:76px;left:0;right:0;background:var(--color-ink);padding:16px var(--site-gutter) 24px;max-height:calc(100dvh - 76px);overflow:auto;box-shadow:0 16px 24px #0005}nav.is-open{display:grid;gap:2px}nav a{font-size:14px;padding:14px 12px}.nav-join{margin-top:8px}nav a[aria-current]:after{display:none}}
+</style>

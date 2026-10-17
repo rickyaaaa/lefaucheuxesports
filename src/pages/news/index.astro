@@ -1,0 +1,22 @@
+---
+import Atmosphere from "../../components/Atmosphere.astro";
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import NewsCard from '../../components/NewsCard.astro';
+import Button from '../../components/Button.astro';
+const news = (await getCollection('news', ({data}) => !data.draft && data.pubDate <= new Date())).sort((a,b)=>b.data.pubDate.valueOf()-a.data.pubDate.valueOf());
+const categories = ['All','Teams','Sponsors','Collaboration','Partnership'];
+---
+<BaseLayout title="News" description="Team stories, sponsorship announcements, collaborations and partnerships from Lefaucheux Esports."><PageHero title="THE LFX" accent="LATEST." breadcrumb="News" description="Stories from our teams. New connections. The next chapter of LFX." /><section class="section"><Atmosphere variant="signal" /><div class="container"><div class="news-filters" role="group" aria-label="Filter news by category">{categories.map(category => <button class="filter-button" data-filter={category} aria-pressed={category==='All'}>{category}</button>)}</div><div class="news-grid">{news.map(entry=><NewsCard entry={entry} />)}</div><div class="empty-state" id="news-empty" aria-live="polite" hidden={news.length>0}><h2>THE NEXT STORY<br /><span class="crimson">STARTS HERE.</span></h2><p id="empty-copy">No announcements published yet. Check back for official team news and updates from LFX.</p><Button href="/esports/" secondary>Explore our teams</Button></div></div></section></BaseLayout>
+<script>
+  const buttons = document.querySelectorAll<HTMLButtonElement>('[data-filter]');
+  const cards = document.querySelectorAll<HTMLElement>('[data-category]');
+  buttons.forEach(button => button.addEventListener('click', () => {
+    buttons.forEach(other=>other.setAttribute('aria-pressed',String(other===button)));
+    let visible=0; cards.forEach(card=>{const show=button.dataset.filter==='All'||card.dataset.category===button.dataset.filter;card.hidden=!show;if(show)visible++;});
+    const empty=document.getElementById('news-empty');if(empty)empty.hidden=visible>0;
+    const copy=document.getElementById('empty-copy');if(copy)copy.textContent=button.dataset.filter==='All'?'No announcements published yet. Check back for official team news and updates from LFX.':`No ${button.dataset.filter?.toLowerCase()} announcements published yet. Check back for official LFX updates.`;
+  }));
+</script>
+<style>.news-filters{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:40px}.news-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px}#news-empty{padding:52px}#news-empty p{margin:24px 0 28px}@media(max-width:767px){.news-grid{grid-template-columns:1fr}#news-empty{padding:32px 22px}}</style>

@@ -1,0 +1,18 @@
+---
+import { Image } from 'astro:assets';
+import { players } from '../data/content';
+interface Props { decorative?: boolean }
+const { decorative = false } = Astro.props;
+const lineup = players.filter(player => player.published && player.division === 'mpl-sg').sort((a,b) => a.sortOrder-b.sortOrder);
+// Pair the two central portraits in front, then layer outward symmetrically.
+const positions = [15, 29, 43, 57, 71, 85];
+const depths = [1, 3, 5, 6, 4, 2];
+const scales = [.9, .96, 1, 1, .96, .9];
+---
+<div class="singapore-lineup" role={decorative ? undefined : 'img'} aria-hidden={decorative ? 'true' : undefined} aria-label={decorative ? undefined : `LFX MPL Singapore players: ${lineup.map(player => player.nickname).join(', ')}`}>
+  {lineup.map((player, index) => <Image src={player.lineupImage ?? player.image} alt="" widths={[160,240,400]} sizes="(max-width: 600px) 26vw, 160px" style={{'--player-position': `${positions[index]}%`, '--player-depth': depths[index], '--player-scale': scales[index]}} />)}
+</div>
+<style>
+  .singapore-lineup{position:relative;width:100%;aspect-ratio:2;isolation:isolate;overflow:hidden}
+  img{position:absolute;bottom:0;left:var(--player-position);width:28%;height:auto;max-width:none;z-index:var(--player-depth);transform:translateX(-50%) scale(var(--player-scale));transform-origin:center bottom}
+</style>

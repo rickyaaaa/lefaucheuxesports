@@ -1,0 +1,15 @@
+---
+import Atmosphere from '../components/Atmosphere.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import AchievementCard from '../components/AchievementCard.astro';
+import { achievements } from '../data/content';
+---
+<BaseLayout title="Achievements" description="LFX Ladies — second place at WGLC 2026. Tournament results documented in the Lefaucheux Esports company profile.">
+  <PageHero title="OUR" accent="ACHIEVEMENTS." breadcrumb="Achievements" description="Lefaucheux Esports tournament results." />
+  <section class="section">
+    <Atmosphere variant="signal" />
+    <div class="container results-list">{achievements.filter(result => result.published).map(achievement => <AchievementCard achievement={achievement} showDivision />)}</div>
+  </section>
+</BaseLayout>
+<style>.results-list{display:flex;justify-content:center;flex-wrap:wrap;gap:48px}</style>

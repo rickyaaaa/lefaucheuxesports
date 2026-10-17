@@ -1,0 +1,7 @@
+---
+import Atmosphere from "../components/Atmosphere.astro";
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Button from '../components/Button.astro';
+---
+<BaseLayout title="Page not found" noindex><section class="section"><Atmosphere variant="signal" /><div class="container not-found"><span aria-hidden="true">404</span><h1>OFF THE MAP.<br /><strong>STILL IN THE GAME.</strong></h1><p>This page couldn’t be found. Head back to LFX and pick up where you left off.</p><Button href="/">Back to home</Button></div></section></BaseLayout>
+<style>.not-found{text-align:center;padding-block:24px}.not-found>span{font:100px var(--font-display);color:var(--color-crimson)}h1{font-size:clamp(32px,5vw,54px);margin:24px 0}h1 strong{font-weight:400;color:var(--color-crimson)}.not-found p{margin:0 auto 32px}</style>

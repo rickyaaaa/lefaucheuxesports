@@ -1,0 +1,16 @@
+---
+import Atmosphere from "./Atmosphere.astro";
+import { Image } from 'astro:assets';
+import logo from '../assets/brand/lfx-logo.webp';
+import { navigation, site } from '../data/site';
+---
+<footer class="site-footer"><Atmosphere variant="weave" /><div class="container">
+  <div class="footer-main"><div class="footer-brand"><a href="/" aria-label="LFX home"><Image src={logo} width={110} alt="Lefaucheux Esports" /></a><p>Built from passion.<br />Driven by ambition.</p></div>
+  <div><h2>Explore LFX</h2><div class="footer-links">{navigation.slice(0, 7).map(([name, href]) => <a href={href}>{name}</a>)}</div></div>
+  <div class="footer-contact"><h2>Start a conversation</h2><a href={`mailto:${site.email}`}>{site.email}</a><a href={`tel:${site.phoneHref}`}>{site.phone}</a><p>Instagram: {site.instagram}<br />TikTok: {site.tiktok}</p></div></div>
+  <div class="footer-bottom"><span>© {new Date().getFullYear()} Lefaucheux Esports. All rights reserved.</span><span>Singapore roots. Global ambition.</span></div>
+</div></footer>
+<style>
+  .site-footer{background:var(--color-ink);padding:64px 0 24px}.footer-main{display:grid;grid-template-columns:1.2fr 1fr 1.2fr;gap:64px;padding-bottom:48px}.footer-brand img{width:100px;height:82px;object-fit:contain}.footer-brand p{margin-top:18px}.site-footer h2{font:600 12px var(--font-body);text-transform:uppercase;letter-spacing:.08em;margin-bottom:24px}.site-footer p,.site-footer a{font-size:13px;line-height:1.9;color:var(--color-text-muted)}.site-footer a:hover{color:white}.footer-links{display:grid;grid-template-columns:1fr 1fr;gap:6px 16px}.footer-contact>a{display:block;overflow-wrap:anywhere}.footer-contact p{margin-top:18px}.footer-bottom{border-top:1px solid var(--color-border-dark);padding-top:22px;display:flex;justify-content:space-between;gap:16px;font-size:11px;color:var(--color-text-muted)}
+  @media(max-width:767px){.footer-main{grid-template-columns:1fr;gap:32px}.footer-bottom{flex-direction:column}.footer-links{max-width:360px}}
+</style>

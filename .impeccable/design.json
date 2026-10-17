@@ -1,0 +1,611 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-15T10:12:24Z",
+  "title": "Design System: Lefaucheux Esports",
+  "extensions": {
+    "colorMeta": {
+      "crimson": {
+        "role": "primary",
+        "displayName": "LFX Crimson",
+        "tonalRamp": [
+          "oklch(15% 0.23237 23.43)",
+          "oklch(26.43% 0.23237 23.43)",
+          "oklch(37.86% 0.23237 23.43)",
+          "oklch(49.29% 0.23237 23.43)",
+          "oklch(60.71% 0.23237 23.43)",
+          "oklch(72.14% 0.23237 23.43)",
+          "oklch(83.57% 0.23237 23.43)",
+          "oklch(95% 0.23237 23.43)"
+        ]
+      },
+      "crimson-hover": {
+        "role": "primary",
+        "displayName": "Bright Crimson",
+        "tonalRamp": [
+          "oklch(15% 0.24894 20.73)",
+          "oklch(26.43% 0.24894 20.73)",
+          "oklch(37.86% 0.24894 20.73)",
+          "oklch(49.29% 0.24894 20.73)",
+          "oklch(60.71% 0.24894 20.73)",
+          "oklch(72.14% 0.24894 20.73)",
+          "oklch(83.57% 0.24894 20.73)",
+          "oklch(95% 0.24894 20.73)"
+        ]
+      },
+      "crimson-button-hover": {
+        "role": "primary",
+        "displayName": "Deep CTA Crimson",
+        "tonalRamp": [
+          "oklch(15% 0.21285 22.85)",
+          "oklch(26.43% 0.21285 22.85)",
+          "oklch(37.86% 0.21285 22.85)",
+          "oklch(49.29% 0.21285 22.85)",
+          "oklch(60.71% 0.21285 22.85)",
+          "oklch(72.14% 0.21285 22.85)",
+          "oklch(83.57% 0.21285 22.85)",
+          "oklch(95% 0.21285 22.85)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26.43% 0 0)",
+          "oklch(37.86% 0 0)",
+          "oklch(49.29% 0 0)",
+          "oklch(60.71% 0 0)",
+          "oklch(72.14% 0 0)",
+          "oklch(83.57% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "black-russian": {
+        "role": "neutral",
+        "displayName": "Black Russian",
+        "tonalRamp": [
+          "oklch(15% 0.03889 266.41)",
+          "oklch(26.43% 0.03889 266.41)",
+          "oklch(37.86% 0.03889 266.41)",
+          "oklch(49.29% 0.03889 266.41)",
+          "oklch(60.71% 0.03889 266.41)",
+          "oklch(72.14% 0.03889 266.41)",
+          "oklch(83.57% 0.03889 266.41)",
+          "oklch(95% 0.03889 266.41)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Panel Navy",
+        "tonalRamp": [
+          "oklch(15% 0.04110 266.55)",
+          "oklch(26.43% 0.04110 266.55)",
+          "oklch(37.86% 0.04110 266.55)",
+          "oklch(49.29% 0.04110 266.55)",
+          "oklch(60.71% 0.04110 266.55)",
+          "oklch(72.14% 0.04110 266.55)",
+          "oklch(83.57% 0.04110 266.55)",
+          "oklch(95% 0.04110 266.55)"
+        ]
+      },
+      "surface-2": {
+        "role": "neutral",
+        "displayName": "Roster Charcoal",
+        "tonalRamp": [
+          "oklch(15% 0.01792 284.67)",
+          "oklch(26.43% 0.01792 284.67)",
+          "oklch(37.86% 0.01792 284.67)",
+          "oklch(49.29% 0.01792 284.67)",
+          "oklch(60.71% 0.01792 284.67)",
+          "oklch(72.14% 0.01792 284.67)",
+          "oklch(83.57% 0.01792 284.67)",
+          "oklch(95% 0.01792 284.67)"
+        ]
+      },
+      "surface-3": {
+        "role": "neutral",
+        "displayName": "Portrait Charcoal",
+        "tonalRamp": [
+          "oklch(15% 0.02308 280.75)",
+          "oklch(26.43% 0.02308 280.75)",
+          "oklch(37.86% 0.02308 280.75)",
+          "oklch(49.29% 0.02308 280.75)",
+          "oklch(60.71% 0.02308 280.75)",
+          "oklch(72.14% 0.02308 280.75)",
+          "oklch(83.57% 0.02308 280.75)",
+          "oklch(95% 0.02308 280.75)"
+        ]
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "White",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26.43% 0 0)",
+          "oklch(37.86% 0 0)",
+          "oklch(49.29% 0 0)",
+          "oklch(60.71% 0 0)",
+          "oklch(72.14% 0 0)",
+          "oklch(83.57% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "offwhite": {
+        "role": "neutral",
+        "displayName": "Offwhite",
+        "tonalRamp": [
+          "oklch(15% 0.00264 286.35)",
+          "oklch(26.43% 0.00264 286.35)",
+          "oklch(37.86% 0.00264 286.35)",
+          "oklch(49.29% 0.00264 286.35)",
+          "oklch(60.71% 0.00264 286.35)",
+          "oklch(72.14% 0.00264 286.35)",
+          "oklch(83.57% 0.00264 286.35)",
+          "oklch(95% 0.00264 286.35)"
+        ]
+      },
+      "pink-watermark": {
+        "role": "neutral",
+        "displayName": "Pink Watermark",
+        "tonalRamp": [
+          "oklch(15% 0.08282 3.76)",
+          "oklch(26.43% 0.08282 3.76)",
+          "oklch(37.86% 0.08282 3.76)",
+          "oklch(49.29% 0.08282 3.76)",
+          "oklch(60.71% 0.08282 3.76)",
+          "oklch(72.14% 0.08282 3.76)",
+          "oklch(83.57% 0.08282 3.76)",
+          "oklch(95% 0.08282 3.76)"
+        ]
+      },
+      "text-muted": {
+        "role": "neutral",
+        "displayName": "Muted Slate",
+        "tonalRamp": [
+          "oklch(15% 0.02580 265.55)",
+          "oklch(26.43% 0.02580 265.55)",
+          "oklch(37.86% 0.02580 265.55)",
+          "oklch(49.29% 0.02580 265.55)",
+          "oklch(60.71% 0.02580 265.55)",
+          "oklch(72.14% 0.02580 265.55)",
+          "oklch(83.57% 0.02580 265.55)",
+          "oklch(95% 0.02580 265.55)"
+        ]
+      },
+      "text-dark": {
+        "role": "neutral",
+        "displayName": "Dark Text",
+        "tonalRamp": [
+          "oklch(15% 0.01199 277.83)",
+          "oklch(26.43% 0.01199 277.83)",
+          "oklch(37.86% 0.01199 277.83)",
+          "oklch(49.29% 0.01199 277.83)",
+          "oklch(60.71% 0.01199 277.83)",
+          "oklch(72.14% 0.01199 277.83)",
+          "oklch(83.57% 0.01199 277.83)",
+          "oklch(95% 0.01199 277.83)"
+        ]
+      },
+      "border-dark": {
+        "role": "neutral",
+        "displayName": "Dark-Surface Border",
+        "tonalRamp": [
+          "oklch(15% 0 0)",
+          "oklch(26.43% 0 0)",
+          "oklch(37.86% 0 0)",
+          "oklch(49.29% 0 0)",
+          "oklch(60.71% 0 0)",
+          "oklch(72.14% 0 0)",
+          "oklch(83.57% 0 0)",
+          "oklch(95% 0 0)"
+        ]
+      },
+      "border-light": {
+        "role": "neutral",
+        "displayName": "Light-Surface Border",
+        "tonalRamp": [
+          "oklch(15% 0.03889 266.41)",
+          "oklch(26.43% 0.03889 266.41)",
+          "oklch(37.86% 0.03889 266.41)",
+          "oklch(49.29% 0.03889 266.41)",
+          "oklch(60.71% 0.03889 266.41)",
+          "oklch(72.14% 0.03889 266.41)",
+          "oklch(83.57% 0.03889 266.41)",
+          "oklch(95% 0.03889 266.41)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Homepage short stacked welcome headline; responsive sizes remain surface-specific."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Uppercase section headings."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Default short card headings."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Reading copy with 70ch maximum measure."
+      },
+      "body-compact": {
+        "displayName": "Compact Body",
+        "purpose": "Homepage introduction and supporting copy, including mobile hero."
+      },
+      "label": {
+        "displayName": "Action Label",
+        "purpose": "Uppercase primary and secondary actions."
+      },
+      "navigation": {
+        "displayName": "Navigation",
+        "purpose": "Compact desktop navigation; mobile menu grows to 14px."
+      },
+      "metadata": {
+        "displayName": "Metadata",
+        "purpose": "Goal labels, news metadata and player supporting labels."
+      }
+    },
+    "shadows": [
+      {
+        "name": "mobile-menu",
+        "value": "0 16px 24px #0005",
+        "purpose": "Functional separation under the expanded mobile header menu."
+      },
+      {
+        "name": "motion-control",
+        "value": "0 6px 20px #0003",
+        "purpose": "Separate the fixed ambient-motion control from section backgrounds."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-lfx",
+        "value": "cubic-bezier(.22,1,.36,1)",
+        "purpose": "Portrait and division-image zoom easing."
+      },
+      {
+        "name": "duration-fast",
+        "value": "180ms",
+        "purpose": "Button fill and arrow transitions."
+      },
+      {
+        "name": "duration-normal",
+        "value": "350ms",
+        "purpose": "Card border and crimson-rule transitions."
+      },
+      {
+        "name": "duration-image",
+        "value": "600ms",
+        "purpose": "Image-only zoom inside a stable frame."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}",
+        "purpose": "Remove smooth scrolling and effectively disable animation and transitions."
+      },
+      {
+        "name": "signal-travel",
+        "value": "none",
+        "purpose": "Inactive: ambient and title motion removed at user request."
+      },
+      {
+        "name": "title-arrive",
+        "value": "none",
+        "purpose": "Inactive: ambient and title motion removed at user request."
+      },
+      {
+        "name": "editorial-hover",
+        "value": "250ms cubic-bezier(.22,1,.36,1)",
+        "purpose": "Subtle editorial-row background response."
+      },
+      {
+        "name": "ambient-pause-contract",
+        "value": "none",
+        "purpose": "Inactive: ambient and title motion removed at user request."
+      },
+      {
+        "name": "reduced-motion-trace",
+        "value": "@media(prefers-reduced-motion:reduce){.ambience-trace{animation:none;stroke-dashoffset:35;opacity:.4}}",
+        "purpose": "Retain a static decorative trace and hide the motion control."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "wide-art",
+        "value": "min-width:1600px",
+        "purpose": "Re-align desktop hero art."
+      },
+      {
+        "name": "navigation-collapse",
+        "value": "max-width:1099px",
+        "purpose": "76px header and toggle navigation; tablet hero adjustment."
+      },
+      {
+        "name": "tablet-grid",
+        "value": "max-width:1024px",
+        "purpose": "Two-column player grid and tighter split spacing."
+      },
+      {
+        "name": "contact-tight",
+        "value": "max-width:900px",
+        "purpose": "Reduce contact-layout gap."
+      },
+      {
+        "name": "mobile",
+        "value": "max-width:767px",
+        "purpose": "Single-column editorial layouts and normal-flow homepage art at aspect ratio 1.8."
+      },
+      {
+        "name": "compact-caption",
+        "value": "max-width:600px",
+        "purpose": "Smaller player caption padding and taller division cards."
+      },
+      {
+        "name": "small-player-grid",
+        "value": "max-width:360px",
+        "purpose": "One-column player grid."
+      }
+    ],
+    "focus": [
+      {
+        "name": "interactive-focus",
+        "value": "3px solid var(--color-crimson-hover); outline-offset:5px",
+        "purpose": "Visible keyboard focus for links, buttons and native selection."
+      }
+    ],
+    "layout": {
+      "contentMax": "1200px",
+      "anchorOffset": "100px",
+      "note": "--container-wide exists in the stylesheet but is not currently consumed; it is not a normative layout token here."
+    },
+    "rampNote": "Tonal ramps are synthesized OKLCH preview extensions, not implemented CSS scales. Alpha-border ramps use the opaque source hue for visualization. Canonical colors remain in DESIGN.md frontmatter.",
+    "atmosphere": {
+      "directionSource": ".impeccable/atmosphere-brief.md",
+      "evidenceSource": "docs/COMPANY-PROFILE.md",
+      "material": {
+        "source": "src/assets/brand/jersey-detail.png",
+        "origin": "Visible jersey crop rendered from company-profile PDF page 2.",
+        "webpWidth": "1000px",
+        "webpQuality": 75,
+        "verifiedOutputBytes": 17864
+      },
+      "logo": {
+        "source": "src/assets/brand/lfx-logo.webp",
+        "purpose": "Official low-opacity edge mark; omitted for weave/light and the homepage art field."
+      },
+      "variants": {
+        "signal": {
+          "textureOpacity": 0.11,
+          "logoOpacity": 0.035,
+          "planeOpacity": 0.065,
+          "trackOpacity": 0.27,
+          "bracketOpacity": 0.35,
+          "trace": "static"
+        },
+        "weave": {
+          "textureOpacity": 0.09,
+          "textureMask": "linear-gradient(90deg,#000,transparent 68%)",
+          "linesTransform": "scaleX(-1)",
+          "logoOpacity": 0,
+          "trace": "static"
+        },
+        "arena": {
+          "textureOpacity": 0.18,
+          "textureMask": "linear-gradient(90deg,transparent,#000 80%)",
+          "planeOpacity": 0.12,
+          "logoOpacity": 0.06,
+          "trace": "static"
+        },
+        "light": {
+          "texture": "none",
+          "logo": "none",
+          "planeOpacity": 0.04,
+          "trackOpacity": 0.14,
+          "bracketOpacity": 0.3,
+          "trace": "static"
+        }
+      },
+      "mobile": {
+        "breakpoint": "767px",
+        "lineWidth": "180%",
+        "lineLeft": "-80%",
+        "textureLeft": "15%",
+        "textureOpacity": 0.08,
+        "arenaTextureOpacity": 0.12,
+        "logoWidth": "75vw",
+        "logoRight": "-20%",
+        "logoOpacity": 0.03
+      },
+      "layering": "Decorative aria-hidden layers; pointer-events:none; isolated/clipped section wrapper; content above. Home atmosphere belongs inside hero-art behind actual cutouts.",
+      "foregroundDetails": {
+        "goalBackground": "var(--color-surface)",
+        "goalMarkColor": "#ffffff05",
+        "playerPhotoBackground": "linear-gradient(145deg,#271822,#171a28)",
+        "playerOverlay": "border-top:1px solid #e2012d24; background:linear-gradient(115deg,transparent 68%,#e2012d0d 68%,#e2012d0d 78%,transparent 78%)",
+        "cascadeNote": "Existing scoped component backgrounds and goal-mark color take precedence over corresponding plain global class rules; the new player-photo::after overlay applies."
+      }
+    },
+    "jerseyShowcase": {
+      "source": "src/components/JerseyShowcase.astro",
+      "surface": "src/pages/services.astro#jersey",
+      "brief": ".impeccable/jersey-brief.md",
+      "provenance": "docs/sources/drive/manifest.json",
+      "media": [
+        "src/assets/jerseys/official-mpl-sg-s12.png",
+        "src/assets/jerseys/home.jpg",
+        "src/assets/jerseys/away.jpg"
+      ],
+      "layout": "Asymmetrical .82fr / 1.18fr columns, 28px gap; poster beside two stacked front/back references with 24px gap.",
+      "mobile": "At max-width:767px, one column with 24px gap; poster centered at up to 480px wide.",
+      "images": "Contained, natural-height authentic artwork; 4/5 poster and 1600/716 design frames preserve original white design canvases. Astro generates optimized variants.",
+      "surfaceTokens": "--color-surface-2 figure shells, --radius-small (4px), --color-text-muted metadata; white design canvas uses the existing white palette.",
+      "captions": "Stable Anton regular titles at 22px, 20px on mobile; Inter metadata at 11px and 1.6 line height. Padding 18px 20px, 16px on mobile.",
+      "behavior": "Semantic figures with descriptive image alternatives; inquiry only, with no ecommerce, price or stock promises."
+    },
+    "motionControl": {
+      "position": "fixed",
+      "right": "20px",
+      "bottom": "18px",
+      "zIndex": 40,
+      "mobile": {
+        "right": "12px",
+        "bottom": "12px",
+        "padding": "10px",
+        "fontSize": "10px"
+      },
+      "preferenceKey": "lfx-motion",
+      "pressedMeaning": "true means user requested paused traces",
+      "initiallyHidden": true,
+      "reducedMotion": "hidden; ambient trace static",
+      "noJavaScript": "control stays hidden; traces stay paused",
+      "status": "Inactive source only; not mounted in BaseLayout"
+    },
+    "motionStatus": {
+      "ambientEnabled": false,
+      "titleEntranceEnabled": false,
+      "controlMounted": false,
+      "updatedAt": "2026-10-15",
+      "reason": "User requested motion removed for now. Existing hover feedback retained."
+    },
+    "homeDivisions": {
+      "headingAlignment": "center",
+      "watermarkAlignment": "center",
+      "additionalTeamsCta": false,
+      "divisionCardLinks": "preserved"
+    }
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Crimson action link with darker hover fill and translating inline arrow.",
+      "html": "<a class=\"ds-button\" href=\"/profile/\">Discover LFX<svg class=\"ds-arrow\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"M4 12h15m-6-6 6 6-6 6\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"square\"/></svg></a>",
+      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;gap:32px;min-height:50px;padding:16px 24px;background:var(--color-crimson,#e2012d);color:white;font:700 13px var(--font-body,'Inter',Arial,sans-serif);text-transform:uppercase;letter-spacing:.08em;border-radius:2px;text-decoration:none;transition:background 180ms}.ds-button:hover{background:#c90029}.ds-arrow{transition:transform 180ms}.ds-button:hover .ds-arrow{transform:translateX(4px)}.ds-button:focus-visible,.ds-select:focus-visible,.ds-nav a:focus-visible,.ds-filter:focus-visible{outline:3px solid var(--color-crimson-hover,#ff1744);outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-button,.ds-arrow,.ds-goal:after{transition-duration:.01ms!important}}"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Outlined action for secondary navigation.",
+      "html": "<a class=\"ds-button ds-secondary\" href=\"/profile/\">Discover our story<svg class=\"ds-arrow\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" aria-hidden=\"true\"><path d=\"M4 12h15m-6-6 6 6-6 6\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"square\"/></svg></a>",
+      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:center;gap:32px;min-height:50px;padding:16px 24px;background:var(--color-crimson,#e2012d);color:white;font:700 13px var(--font-body,'Inter',Arial,sans-serif);text-transform:uppercase;letter-spacing:.08em;border-radius:2px;text-decoration:none;transition:background 180ms}.ds-button:hover{background:#c90029}.ds-arrow{transition:transform 180ms}.ds-button:hover .ds-arrow{transform:translateX(4px)}.ds-button:focus-visible,.ds-select:focus-visible,.ds-nav a:focus-visible,.ds-filter:focus-visible{outline:3px solid var(--color-crimson-hover,#ff1744);outline-offset:5px}@media(prefers-reduced-motion:reduce){.ds-button,.ds-arrow,.ds-goal:after{transition-duration:.01ms!important}}.ds-secondary{background:transparent;border:1px solid #ffffff36}.ds-secondary:hover{background:transparent;border-color:var(--color-crimson,#e2012d)}"
+    },
+    {
+      "name": "Interest Selection",
+      "kind": "input",
+      "refersTo": "selection",
+      "description": "Native labeled selection used to choose an email inquiry subject.",
+      "html": "<div class=\"ds-inquiry\"><label for=\"ds-interest\">I\u2019m interested in</label><select class=\"ds-select\" id=\"ds-interest\" name=\"interest\"><option>Sponsorship</option><option>Collaboration</option><option>Partnership</option></select></div>",
+      "css": ".ds-inquiry{background:var(--color-surface,#121a2e);padding:32px 22px;color:var(--color-white,#fff);font-family:var(--font-body,'Inter',Arial,sans-serif)}.ds-inquiry label{display:block;margin:0 0 12px;font-size:12px;font-weight:600}.ds-select{display:block;width:100%;height:52px;background:var(--color-black-russian,#091022);color:white;border:1px solid #ffffff30;padding:0 14px;border-radius:2px;cursor:pointer;font:15px var(--font-body,'Inter',Arial,sans-serif)}.ds-button:focus-visible,.ds-select:focus-visible,.ds-nav a:focus-visible,.ds-filter:focus-visible{outline:3px solid var(--color-crimson-hover,#ff1744);outline-offset:5px}"
+    },
+    {
+      "name": "Main Navigation",
+      "kind": "nav",
+      "refersTo": "navigation",
+      "description": "Desktop slice of the sticky ink navigation with a current-page underline and outlined Join Us action. Full mobile toggle behavior remains in Header.astro.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Main navigation\"><a href=\"/\" aria-current=\"page\">Home</a><a href=\"/esports/\">Esports</a><a class=\"ds-nav-join\" href=\"/join-us/\">Join Us</a></nav>",
+      "css": ".ds-nav{display:flex;align-items:center;flex-wrap:wrap;gap:25px;padding:16px 24px;background:var(--color-ink,#080808);color:var(--color-white,#fff);font-family:var(--font-body,'Inter',Arial,sans-serif)}.ds-nav a{font-size:11px;font-weight:700;letter-spacing:.045em;text-transform:uppercase;white-space:nowrap;padding:16px 0;position:relative;text-decoration:none;color:inherit}.ds-nav a:hover,.ds-nav a[aria-current]{color:var(--color-crimson-hover,#ff1744)}.ds-nav a[aria-current]:after{content:'';height:2px;background:var(--color-crimson,#e2012d);position:absolute;bottom:4px;left:0;right:0}.ds-nav a.ds-nav-join{border:1px solid #782034;padding:12px 19px}.ds-button:focus-visible,.ds-select:focus-visible,.ds-nav a:focus-visible,.ds-filter:focus-visible{outline:3px solid var(--color-crimson-hover,#ff1744);outline-offset:5px}"
+    },
+    {
+      "name": "News Filter",
+      "kind": "chip",
+      "refersTo": "filter",
+      "description": "Square category controls; the selected state uses aria-pressed.",
+      "html": "<div class=\"ds-filters\" role=\"group\" aria-label=\"Filter news by category\"><button class=\"ds-filter\" aria-pressed=\"true\">All</button><button class=\"ds-filter\" aria-pressed=\"false\">Teams</button></div>",
+      "css": ".ds-filters{display:flex;gap:10px;flex-wrap:wrap;padding:20px;background:var(--color-black-russian,#091022);color:var(--color-white,#fff)}.ds-filter{padding:13px 20px;border:1px solid #ffffff30;background:transparent;color:inherit;font:12px var(--font-body,'Inter',Arial,sans-serif);min-height:44px;cursor:pointer}.ds-filter:hover,.ds-filter[aria-pressed=true]{background:var(--color-crimson,#e2012d);color:white;border-color:var(--color-crimson,#e2012d)}.ds-button:focus-visible,.ds-select:focus-visible,.ds-nav a:focus-visible,.ds-filter:focus-visible{outline:3px solid var(--color-crimson-hover,#ff1744);outline-offset:5px}"
+    },
+    {
+      "name": "Ambition Goal Card",
+      "kind": "card",
+      "refersTo": "goal-card",
+      "description": "A future ambition surface with an extending crimson rule; its label explicitly distinguishes goals from results.",
+      "html": "<article class=\"ds-goal\"><div><span class=\"ds-goal-label\">OUR AMBITION \u00b7 GLOBAL STAGE</span><h3>M-SERIES</h3></div><span class=\"ds-goal-mark\" aria-hidden=\"true\">M</span></article>",
+      "css": ".ds-goal{position:relative;background:var(--color-surface,#121a2e);color:var(--color-white,#fff);padding:32px;min-height:160px;display:flex;align-items:center;justify-content:space-between;border:1px solid #ffffff12;border-radius:4px;overflow:hidden;font-family:var(--font-body,'Inter',Arial,sans-serif)}.ds-goal:after{content:'';height:2px;position:absolute;bottom:0;left:32px;right:32px;background:var(--color-crimson,#e2012d);transform:scaleX(.2);transform-origin:left;transition:transform 350ms}.ds-goal:hover:after{transform:scaleX(1)}.ds-goal-label{font-size:11px;letter-spacing:.08em;color:var(--color-text-muted,#aeb6c7)}.ds-goal h3{font-family:var(--font-display,'Anton',sans-serif);font-weight:400;font-size:46px;line-height:1.25;letter-spacing:.005em;margin:10px 0 0;text-transform:uppercase}.ds-goal-mark{font-family:var(--font-display,'Anton',sans-serif);font-size:108px;line-height:1;color:#ffffff05;position:absolute;right:20px;top:12px}@media(prefers-reduced-motion:reduce){.ds-button,.ds-arrow,.ds-goal:after{transition-duration:.01ms!important}}"
+    },
+    {
+      "name": "Roster Nickname Caption",
+      "kind": "card",
+      "refersTo": "player-card",
+      "description": "Caption slice of PlayerCard: centered approved nickname on ink, stationary beneath the official portrait; role metadata appears only when confirmed.",
+      "html": "<figure class=\"ds-player-caption\"><figcaption><strong>Jessy</strong></figcaption></figure>",
+      "css": ".ds-player-caption{margin:0;color:var(--color-white,#fff)}.ds-player-caption figcaption{position:relative;text-align:center;padding:24px;background:var(--color-ink,#080808)}.ds-player-caption strong{display:block;font-family:var(--font-display,'Anton',sans-serif);font-weight:400;font-size:25px}.ds-player-caption figcaption:after{content:'';position:absolute;bottom:0;left:0;height:3px;width:100%;background:var(--color-crimson,#e2012d);transform:scaleX(0);transform-origin:left;transition:transform 350ms}.ds-player-caption:hover figcaption:after{transform:scaleX(1)}@media(max-width:600px){.ds-player-caption figcaption{padding:18px 12px}.ds-player-caption strong{font-size:19px}}@media(prefers-reduced-motion:reduce){.ds-player-caption figcaption:after{transition-duration:.01ms!important}}"
+    },
+    {
+      "name": "Achievement Caption",
+      "kind": "card",
+      "description": "Caption slice of the shared AchievementCard on Esports and Achievements. Production pairs it with contained verified artwork; a source certificate requires user approval when no verified logo is available.",
+      "html": "<figure class=\"ds-achievement-caption\"><figcaption><h3>WGLC 2026</h3><p class=\"ds-placement\" lang=\"id\">Juara 2</p><p class=\"ds-division\">MLBB Ladies Indonesia</p></figcaption></figure>",
+      "css": ".ds-achievement-caption{margin:0 auto;width:100%;max-width:380px;text-align:center;color:var(--color-white,#fff);font-family:var(--font-body,'Inter',Arial,sans-serif)}.ds-achievement-caption figcaption{margin-top:24px}.ds-achievement-caption h3{margin:0;font-family:var(--font-display,'Anton',sans-serif);font-weight:400;font-size:28px;line-height:1.25;text-transform:uppercase;letter-spacing:.005em;text-wrap:balance}.ds-placement{font-size:20px;line-height:1.8;color:var(--color-white,#fff);margin:10px auto 0}.ds-division{font-size:13px;line-height:1.8;color:var(--color-text-muted,#aeb6c7);margin:12px auto 0}@media(max-width:600px){.ds-achievement-caption h3{font-size:25px}}"
+    },
+    {
+      "name": "Section Atmosphere Geometry",
+      "kind": "custom",
+      "description": "Self-contained static SVG preview of the actual signal geometry. The source component adds optimized jersey/logo asset layers; state classes and data attributes demonstrate the same pause contract without requiring a framework runtime.",
+      "html": "<section class=\"ds-atmosphere-preview\" data-motion=\"paused\"><div class=\"ds-atmosphere\" aria-hidden=\"true\"><svg class=\"ds-atmosphere-lines\" viewBox=\"0 0 1440 700\" preserveAspectRatio=\"xMidYMid slice\" fill=\"none\"><path class=\"ds-plane\" d=\"M1120-180h170L875 880H705z\" fill=\"currentColor\"/><path class=\"ds-track\" d=\"M1290-180 875 880M1330-180 915 880M-120 540H190L390 60H580\" stroke=\"currentColor\" stroke-width=\"1\"/><path class=\"ds-trace\" d=\"M1290-180 875 880\" stroke=\"currentColor\" stroke-width=\"2\" pathLength=\"100\"/><path class=\"ds-bracket\" d=\"M68 530v42h42m1220-444h42v42\" stroke=\"currentColor\" stroke-width=\"2\"/></svg><div class=\"ds-crosses\"><i></i><i></i><i></i></div></div><h2 class=\"ds-atmosphere-heading\">OUR STORY.<br><span>OUR IDENTITY.</span></h2></section>",
+      "css": ".ds-atmosphere-preview{position:relative;isolation:isolate;overflow:hidden;min-height:260px;background:var(--color-black-russian,#091022);color:white;padding:38px 32px}.ds-atmosphere{position:absolute;inset:0;overflow:hidden;z-index:-1;pointer-events:none;color:var(--color-crimson,#e2012d);contain:paint}.ds-atmosphere-lines{position:absolute;inset:0;width:100%;height:100%}.ds-plane{opacity:.065}.ds-track{opacity:.27}.ds-bracket{opacity:.35}.ds-trace{opacity:.7;stroke-dasharray:8 92;stroke-dashoffset:100;animation:none;animation-play-state:paused}.ds-atmosphere.is-inview .ds-trace{animation-play-state:running}.ds-atmosphere-preview[data-motion='paused'] .ds-atmosphere.is-inview .ds-trace,.ds-atmosphere-preview[data-page-hidden='true'] .ds-atmosphere.is-inview .ds-trace{animation-play-state:paused}.ds-crosses{display:flex;gap:12px;position:absolute;right:5%;bottom:9%;opacity:.4}.ds-crosses i{position:relative;width:8px;height:8px}.ds-crosses i:before,.ds-crosses i:after{content:'';position:absolute;background:currentColor}.ds-crosses i:before{width:8px;height:1px;top:3px}.ds-crosses i:after{height:8px;width:1px;left:3px}.ds-atmosphere-heading{position:relative;z-index:1;font:400 40px/1.1 var(--font-display,'Anton',sans-serif);letter-spacing:.005em;margin:0;text-transform:uppercase}.ds-atmosphere-heading span{color:var(--color-crimson,#e2012d)}@keyframes ds-signal-travel{to{stroke-dashoffset:0}}@media(prefers-reduced-motion:reduce){.ds-trace{animation:none;stroke-dashoffset:35;opacity:.4}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Built from passion. Driven by ambition.",
+    "overview": "The client's explicit brief establishes a competitive, fearless, premium esports editorial identity. Authentic LFX photography, short uppercase headlines and generous dark surfaces carry the identity; crimson supplies precise emphasis. The current team artwork uses the client originals copied to `src/assets/team/ladies-lineup.png` and `src/assets/team/sg-s12.png`; the latter is labeled official MPL SG S12 artwork, not treated as a current roster database. This documentation records the implemented system, with the supplied `design (1).md` preserved as the source brief. The north star uses the client's existing identity line; no additional qualitative direction is assumed.\n\nThe system pairs disciplined layouts with real player cutouts, jersey texture, layered diagonal planes and image-only zoom. Accents and geometry inherit the explicit client brief and the user's subsequent request for richer background accents and animation across content sections, with Nigma Galaxy and Boomhead as visual references. The new artwork uses original SVG geometry and LFX assets. The visible jersey detail is rendered from page 2 of the supplied company profile, not extracted as a new roster portrait. Missing names, roles and current roster details remain unconfirmed; imagery must never imply invented competitive facts. The exact homepage composition remains in `.impeccable/home-brief.md` and the supplied brief, rather than becoming a layout requirement for every page. The authorized extension is recorded in `.impeccable/atmosphere-brief.md`; PDF evidence is recorded in `docs/COMPANY-PROFILE.md`.",
+    "keyCharacteristics": [
+      "Authentic LFX photography and official identity assets.",
+      "Condensed uppercase Anton paired with readable Inter.",
+      "Ink and Black Russian surfaces, a bright division interlude and restrained crimson emphasis.",
+      "Compact controls, subtle borders and stable captions.",
+      "Layered real jersey texture, official logo and original diagonal SVG tracks.",
+      "Static background accents; no ambient animation or floating motion control.",
+      "Lightweight interaction and visible keyboard focus."
+    ],
+    "rules": [
+      {
+        "name": "The Crimson Emphasis Rule",
+        "body": "Reserve crimson for short emphasis, actions and state; use white or muted slate for long copy.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two Voices Rule",
+        "body": "Use Anton for short display statements and Inter for reading and interaction.",
+        "section": "typography"
+      },
+      {
+        "name": "The Stable Caption Rule",
+        "body": "Animate the image and crimson rule while keeping the caption and card frame stationary.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Background Hierarchy Rule",
+        "body": "Keep atmosphere behind readable content and authentic player faces; vary its material by section without changing the pinned palette.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Available Content Rule",
+        "body": "Keep content readable on initial load, without JavaScript, while paused and under reduced motion; animation is an enhancement.",
+        "section": "components"
+      }
+    ],
+    "dos": [
+      "**Do** use the pinned crimson, ink, Black Russian, white, Anton and Inter identity.",
+      "**Do** use official LFX imagery and keep unconfirmed roster details visibly pending.",
+      "**Do** preserve stable captions while zooming only the image.",
+      "**Do** preserve the supplied homepage sequence in its surface contract.",
+      "**Do** keep keyboard focus visible and honor reduced motion.",
+      "**Do** use the shared atmosphere variants to give sections depth while keeping copy and player faces clear.",
+      "Keep backgrounds static until user requests motion reactivation."
+    ],
+    "donts": [
+      "**Don't** invent player names, roles, sponsor marks or achievement claims.",
+      "**Don't** introduce fake badges, neon everywhere, heavy glassmorphism, gamer stock renders or purple/cyan cyberpunk motifs.",
+      "**Don't** use crimson for long paragraphs.",
+      "**Don't** replace authentic player artwork with decorative geometry or generated players.",
+      "**Don't** turn future goals into achieved-result badges.",
+      "**Don't** copy competitor brand assets or let background movement hide content.",
+      "**Don't** run traces offscreen, on hidden pages or against the user's motion preference."
+    ]
+  }
+}

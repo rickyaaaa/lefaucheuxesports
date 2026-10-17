@@ -1,0 +1,9 @@
+---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+import Arrow from './Arrow.astro';
+interface Props { title: string; href: string; image: ImageMetadata; alt: string; contain?: boolean }
+const {title, href, image, alt, contain = false} = Astro.props;
+---
+<a class:list={['division-card', {contain}]} href={href}><Image src={image} alt={alt} widths={[500,800,1200]} sizes="(max-width: 767px) 90vw, 45vw" /><div class="division-caption"><div><h3>{title}</h3></div><Arrow diagonal /></div></a>
+<style>.division-card{display:block;aspect-ratio:1.35;position:relative;overflow:hidden;border-radius:4px;background:#15151e;color:white}.division-card:before{content:'';position:absolute;inset:0;background:linear-gradient(0deg,#080808 0%,#08080810 75%);z-index:1}.division-card:after{content:'';position:absolute;bottom:0;left:0;right:0;height:4px;background:var(--color-crimson);transform:scaleX(0);transform-origin:left;transition:transform 350ms;z-index:3}.division-card img{height:100%;width:100%;object-fit:cover;object-position:center 32%;transition:transform 600ms var(--ease-lfx)}.division-card.contain img{object-fit:contain;object-position:center bottom}.division-card:hover img{transform:scale(1.05)}.division-card:hover:after{transform:scaleX(1)}.division-caption{position:absolute;bottom:30px;left:32px;right:32px;z-index:2;display:flex;align-items:end;justify-content:space-between}.division-caption h3{font-size:clamp(26px,3vw,38px)}.division-caption>.arrow{color:white;width:26px;height:26px}@media(max-width:600px){.division-caption{bottom:24px;left:24px;right:24px}.division-card{aspect-ratio:1.15}}</style>

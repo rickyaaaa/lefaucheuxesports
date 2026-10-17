@@ -1,0 +1,23 @@
+/* LFX's diagonal jersey panels translated into original background geometry. */
+.section,.site-footer,.page-hero{position:relative;isolation:isolate;overflow:clip}
+.section>.container,.site-footer>.container,.page-hero>.container{position:relative;z-index:1}
+.page-hero:after{opacity:.45}
+.page-hero h1{max-width:900px}
+.home-about{border-top:1px solid #e2012d3b}
+.home-divisions{border-block:1px solid #e2012d16}
+.vision{border-top:1px solid #ffffff0d}
+.goal{background:linear-gradient(125deg,#172035,#101729)}
+.goal-mark{color:#ffffff09}
+.player-photo{background:linear-gradient(145deg,#341a2a,#171a28)}
+.player-photo:after{content:'';position:absolute;inset:0;pointer-events:none;border-top:1px solid #e2012d24;background:linear-gradient(115deg,transparent 68%,#e2012d0d 68%,#e2012d0d 78%,transparent 78%)}
+.editorial-row{transition:background 250ms var(--ease-lfx)}
+.editorial-row:hover{background:#ffffff03}
+.profile-contact{background:#0d1020}
+.about-image:after{background:#e2012d06}
+.join-banner>.container{position:relative;z-index:1}
+.home-hero .hero-art>.ambience{z-index:-1}
+.home-hero .hero-art>.ambience .ambience-logo{display:none}
+.home-hero .hero-art>.ambience .ambience-texture{opacity:.16}
+.identity .ambience{opacity:.85}
+.site-footer>.ambience{opacity:.55}
+.join-banner:before,.join-banner:after{opacity:.35}
