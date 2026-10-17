@@ -61,6 +61,11 @@ The QA report is written to `.impeccable/review/` (ignored). For clean desktop/m
 
 ## Deploy to Hostinger / public_html
 
+Git integration setup is documented in [docs/HOSTINGER.md](docs/HOSTINGER.md).
+The `Build Hostinger website` workflow publishes compiled `dist/` files to the
+`hostinger` branch. In hPanel's PHP/HTML Git integration, select that branch;
+`main` contains source code and is not a ready-to-serve document root.
+
 1. Use a staging domain first. In `astro.config.mjs`, set `site` to the final canonical domain; update `public/robots.txt` when changing domains. Use a matching `base` if hosting in a subdirectory. Build again.
 2. Back up the existing **WordPress files, database, uploads, server rules and all public URLs** outside `public_html`. Record a tested rollback procedure. Never remove the only backup.
 3. Upload the **contents** of `dist/` to the staging site's document root. `index.html`, `_astro/`, assets and sitemap files must be directly inside that root.
