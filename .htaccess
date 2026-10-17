@@ -1,0 +1,4 @@
+# Static Astro output for Hostinger Apache/LiteSpeed.
+DirectoryIndex index.html
+Options -Indexes
+ErrorDocument 404 /404.html
