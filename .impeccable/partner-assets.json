@@ -1,0 +1,16 @@
+[
+  {
+    "name": "ish-transportation",
+    "source": "User-provided official logo, 19 October 2026",
+    "sourceSha256": "83256e6550cd8fec38d7f73f641145a454a7b4d9b92b2a5792ab6d7bced7aa57",
+    "asset": "src/assets/partners/ish-transportation.webp",
+    "transform": "Resize to 800px wide without enlargement; lossless WebP; preserve colors, transparency and full image. No generated imagery."
+  },
+  {
+    "name": "arfer-studio",
+    "source": "User-provided official logo, 19 October 2026",
+    "sourceSha256": "1e27a3712a611853757ec2450954bf0e75f71b41292eeba84aa9fed2feec45a9",
+    "asset": "src/assets/partners/arfer-studio.webp",
+    "transform": "Resize to 800px wide without enlargement; lossless WebP; preserve colors, transparency and full image. No generated imagery."
+  }
+]

@@ -1,0 +1,45 @@
+---
+import { partners } from '../data/partners';
+import Arrow from './Arrow.astro';
+import { Image } from 'astro:assets';
+---
+<section class="home-partners" aria-labelledby="partners-heading">
+  <div class="container">
+    <h2 id="partners-heading">OUR <span class="crimson">PARTNERS.</span></h2>
+    <div class="partner-list">
+      {partners.map(partner => (
+        <article class="partner">
+          <div class:list={['partner-logo', partner.logoSurface]}>
+            <Image src={partner.logo} alt={`${partner.name} logo`} widths={[240,480,800]} sizes="(max-width: 767px) 130px, 200px" />
+          </div>
+          <div class="partner-details">
+            <h3>{partner.name}</h3>
+            <p>{partner.support}{partner.scope && <> <span aria-hidden="true">·</span> {partner.scope}</>}</p>
+            {partner.socials.length > 0 && <ul aria-label={`${partner.name} social media`}>
+              {partner.socials.map(social => (
+                <li><a href={social.href} target="_blank" rel="noopener noreferrer" aria-label={`${partner.name} on ${social.name} (opens in a new tab)`}>{social.name}<Arrow diagonal /></a></li>
+              ))}
+            </ul>}
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+<style>
+  .home-partners{background:var(--color-black-russian);padding-block:64px}
+  h2{font-size:clamp(30px,3vw,38px);margin-bottom:32px}
+  .partner-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px;border-block:1px solid var(--color-border-dark)}
+  .partner{display:grid;grid-template-columns:200px minmax(0,1fr);align-items:center;gap:24px;padding-block:32px}
+  .partner-logo{display:flex;align-items:center;justify-content:center;height:180px;padding:12px;border-radius:var(--radius-small)}
+  .partner-logo.black{background:#000}.partner-logo.white{background:var(--color-white)}
+  .partner-logo :global(img){width:100%;height:100%;object-fit:contain}
+  h3{font-size:28px;line-height:1.25;margin-bottom:12px}
+  .partner-details p{font-size:13px;color:var(--color-text-muted)}
+  ul{list-style:none;display:flex;flex-wrap:wrap;gap:24px;padding:0;margin:12px 0 0}
+  a{display:inline-flex;align-items:center;gap:12px;min-height:44px;font-size:13px;font-weight:600}
+  a:hover{text-decoration:underline}a :global(svg){width:14px;height:14px;color:var(--color-crimson-hover)}
+  @media(min-width:768px) and (max-width:1099px){.partner-list{gap:32px}.partner{grid-template-columns:1fr;gap:20px}.partner-logo{width:200px}}
+  @media(max-width:767px){.home-partners{padding-block:48px}.partner-list{grid-template-columns:1fr;gap:0}.partner{grid-template-columns:130px minmax(0,1fr);gap:20px;padding-block:24px}.partner+.partner{border-top:1px solid var(--color-border-dark)}.partner-logo{height:130px;padding:8px}.partner-details p{max-width:32ch}h2{margin-bottom:24px}h3{font-size:22px}ul{gap:16px;margin-top:8px}a{font-size:12px;gap:8px}}
+  @media(max-width:359px){.partner{grid-template-columns:1fr}.partner-logo{width:160px;height:140px}}
+</style>

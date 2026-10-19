@@ -24,3 +24,8 @@ User requested Geek Fam team-page structure as reference: centered Esports banne
 ## Singapore display update — 16 October 2026
 
 User requested the MPL SG coach hidden. Singapore team imagery on Esports now uses six existing individual player cutouts, overlapped horizontally from the center like Ladies, in both the team introduction and hero. No coach is rendered or imported into public roster data. Archived coach/group source assets remain available internally.
+
+
+## Client-confirmed corrections — 19 October 2026
+
+The last Ladies portrait is Mesa, not Nanaw. LFX offers custom jersey inquiries beyond its own team designs, including teams, communities, organizations and individuals; no production specifications or pricing are confirmed. ISH Transportation is the transportation partner for LFX MPL SG S12. Arfer Studio is listed separately as a partner, with its client-supplied social links. Instagram: https://www.instagram.com/arferstudio/; TikTok: https://www.tiktok.com/@arferstudio. Official ISH Transportation and Arfer Studio logos were supplied on 19 October 2026. The exact Arfer Studio YouTube channel URL remains pending. WhatsApp uses +65 8776 3403. The current Gmail contact remains valid; the supplied domain alone does not establish a replacement email address.

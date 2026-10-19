@@ -289,3 +289,13 @@ The homepage Divisions heading and LEFAUCHEUX watermark share the container cent
 - **Don't** copy competitor brand assets or let background movement hide content.
 - **Don't** run traces offscreen, on hidden pages or against the user's motion preference.
 
+
+
+## Client revisions — 19 October 2026
+
+- The final Ladies portrait is Mesa (client correction); its original source filename remains unchanged.
+- Services offers custom jerseys for teams, communities, organizations and individuals. Existing LFX artwork remains a portfolio example.
+- Homepage partners appear between Divisions and Vision. ISH Transportation is credited as Transportation Partner for LFX MPL SG S12. Arfer Studio appears separately as Partner with client-supplied Instagram and TikTok links; its YouTube URL is pending. Official logos retain their colors and proportions, contained on black (ISH) and white (Arfer) surfaces for legibility.
+- The compact partner heading uses clamp(30px, 3vw, 38px); partner names use 28px desktop / 22px mobile, both Anton. These are intentional compact partner typography steps.
+- A global WhatsApp anchor targets the confirmed business number, stays fixed at the lower right, and uses white on #087f45 (hover #066638). Green distinguishes the messaging service from LFX primary actions; no repeated animation. Target size is 56px desktop / 52px mobile, with safe-area offsets and keyboard focus. Header/menu layer stays above it. Footer bottom space reserves room beneath the copyright.
+- Homepage GSAP and its reduced-motion behavior are unchanged. New partner and contact components are visible without JavaScript.

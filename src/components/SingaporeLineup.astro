@@ -4,13 +4,16 @@ import { players } from '../data/content';
 interface Props { decorative?: boolean }
 const { decorative = false } = Astro.props;
 const lineup = players.filter(player => player.published && player.division === 'mpl-sg').sort((a,b) => a.sortOrder-b.sortOrder);
-// Pair the two central portraits in front, then layer outward symmetrically.
-const positions = [15, 29, 43, 57, 71, 85];
-const depths = [1, 3, 5, 6, 4, 2];
-const scales = [.9, .96, 1, 1, .96, .9];
+// Keep the center foremost and layer outward for odd or even roster sizes.
+const center = (lineup.length - 1) / 2;
+const placement = (index: number) => ({
+  '--player-position': `${lineup.length > 1 ? 15 + index * 70 / (lineup.length - 1) : 50}%`,
+  '--player-depth': lineup.length - Math.floor(Math.abs(index - center) * 2) + (index >= center ? 1 : 0),
+  '--player-scale': 1 - 0.1 * Math.abs(index - center) / (center || 1),
+});
 ---
 <div class="singapore-lineup" role={decorative ? undefined : 'img'} aria-hidden={decorative ? 'true' : undefined} aria-label={decorative ? undefined : `LFX MPL Singapore players: ${lineup.map(player => player.nickname).join(', ')}`}>
-  {lineup.map((player, index) => <Image src={player.lineupImage ?? player.image} alt="" widths={[160,240,400]} sizes="(max-width: 600px) 26vw, 160px" style={{'--player-position': `${positions[index]}%`, '--player-depth': depths[index], '--player-scale': scales[index]}} />)}
+  {lineup.map((player, index) => <Image src={player.lineupImage ?? player.image} alt="" widths={[160,240,400]} sizes="(max-width: 600px) 26vw, 160px" style={placement(index)} />)}
 </div>
 <style>
   .singapore-lineup{position:relative;width:100%;aspect-ratio:2;isolation:isolate;overflow:hidden}

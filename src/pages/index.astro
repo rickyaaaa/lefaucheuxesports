@@ -6,6 +6,7 @@ import Button from '../components/Button.astro';
 import DivisionCard from '../components/DivisionCard.astro';
 import Vision from '../components/Vision.astro';
 import JoinBanner from '../components/JoinBanner.astro';
+import Partners from '../components/Partners.astro';
 import ladies from '../assets/team/ladies-lineup.png';
 import sg from '../assets/team/sg-s12.png';
 import sgDivisions from '../assets/team/mpl-home-05.webp';
@@ -14,7 +15,7 @@ import sgDivisions from '../assets/team/mpl-home-05.webp';
   <section class="home-hero"><div class="hero-art" aria-hidden="true"><Atmosphere variant="arena" /><span class="hero-word">FEARLESS</span><Image src={ladies} alt="" widths={[800,1200,1774]} sizes="(max-width: 767px) 100vw, 75vw" loading="eager" fetchpriority="high" /></div><div class="container hero-inner"><div class="hero-copy"><h1><span>WELCOME TO</span><strong>LEFAUCHEUX</strong><span>ESPORTS</span></h1><p>Singapore roots. Global ambition.<br />United by passion for Mobile Legends: Bang Bang. Built to go beyond.</p><Button href="/profile/">Discover LFX</Button></div></div></section>
   <section class="section home-about"><Atmosphere variant="weave" /><div class="container split"><figure class="about-image"><Image src={sg} alt="Official LFX Singapore roster promotional artwork" widths={[400,650,900]} sizes="(max-width: 767px) 90vw, 42vw" /></figure><div class="stack about-copy"><h2><span class="crimson">BUILT FROM PASSION.</span><br />DRIVEN BY AMBITION.</h2><p>Founded in Singapore in 2024, Lefaucheux Esports brings together a shared love for competition and the determination to grow.</p><p>Across our Singapore and Indonesia Ladies divisions, we build on discipline, loyalty and resilience. One organization. One fearless identity.</p><Button href="/profile/" secondary>Discover our story</Button></div></div></section>
   <section class="section light home-divisions"><Atmosphere variant="light" /><div class="container"><div class="section-top"><h2>OUR <span class="crimson">DIVISIONS.</span></h2></div><span class="division-watermark" aria-hidden="true">LEFAUCHEUX</span><div class="division-grid"><DivisionCard title="MPL SG" href="/esports/#mpl-sg" image={sgDivisions} alt="LFX MPL Singapore team in official crimson and black jerseys, client-selected group photo" contain /><DivisionCard title="MLBB ID LADIES" href="/esports/#id-ladies" image={ladies} alt="Five LFX ID Ladies players in crimson and black jerseys" contain /></div></div></section>
-  <Vision /><JoinBanner />
+  <Partners /><Vision /><JoinBanner />
 </BaseLayout>
 <script>
   import '../scripts/home-motion';

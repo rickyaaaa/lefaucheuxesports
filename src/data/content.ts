@@ -3,7 +3,7 @@ import jessy from '../assets/players/jessy.webp';
 import wen from '../assets/players/wen.webp';
 import vanilla from '../assets/players/vanilla.webp';
 import valerie from '../assets/players/valerie.webp';
-import nanaw from '../assets/players/nanaw.webp';
+import mesa from '../assets/players/nanaw.webp';
 import brock from '../assets/players/mpl/brock.webp';
 import caanz from '../assets/players/mpl/caanz.webp';
 import nixie from '../assets/players/mpl/nixie.webp';
@@ -15,6 +15,7 @@ import nixiePose from '../assets/players/mpl/nixie-06.webp';
 import pekoPose from '../assets/players/mpl/peko-10.webp';
 import saikoPose from '../assets/players/mpl/saiko-10.webp';
 import xswaypearPose from '../assets/players/mpl/xswaypear-08.webp';
+import albird from '../assets/players/mpl/albird.webp';
 import wglcCertificate from '../assets/achievements/wglc-certificate.webp';
 export type DivisionId = 'mpl-sg' | 'id-ladies';
 export interface Player {
@@ -27,7 +28,8 @@ const ladiesPlayers: Player[] = [
   { image: wen, nickname: 'Wen' },
   { image: vanilla, nickname: 'Vanilla' },
   { image: valerie, nickname: 'Valerie' },
-  { image: nanaw, nickname: 'Nanaw' },
+  // Client corrected this portrait's identity to Mesa on 19 October 2026.
+  { image: mesa, nickname: 'Mesa' },
 ].map((player, index) => ({
   ...player, id: `ladies-${index + 1}`, division: 'id-ladies', status: 'confirmed', published: true, sortOrder: index,
 }));
@@ -39,6 +41,8 @@ const singaporePlayers: Player[] = [
   { id: 'mpl-peko', image: pekoPose, lineupImage: peko, nickname: 'PEKO' },
   { id: 'mpl-saiko', image: saikoPose, lineupImage: saiko, nickname: 'Saiko' },
   { id: 'mpl-xswaypear', image: xswaypearPose, lineupImage: xswaypear, nickname: 'xSwaypear' },
+  // Name and photo supplied explicitly by the user on 19 October 2026.
+  { id: 'mpl-albird', image: albird, nickname: 'Albird' },
 ].map((player, index) => ({ ...player, division: 'mpl-sg', status: 'confirmed', published: true, sortOrder: index }));
 export const players: Player[] = [...singaporePlayers, ...ladiesPlayers];
 export interface Achievement {

@@ -32,3 +32,7 @@ User requested that the Singapore coach no longer appear and that the team group
 ## Client-selected MPL player poses — 16 October 2026
 
 Roster card replacements: Caanz_10.png, Nixie_06.png, PEKO_10.png, Saiko_10.png and xSwaypear_08.png. All supplied PNGs retain genuine transparency. The unavailable external xSwaypear path was resolved to the exact filename in the project PNG (8) folder. Original copies and checksums are preserved in docs/sources/mpl/selected-poses/manifest.json. Production copies use alpha-bound trim, upper-body crop and proportional WebP encoding only. Brock retains his existing photo. SingaporeLineup uses the original arms-crossed poses through optional lineupImage so the previously approved group composition is preserved. Coach remains hidden and automatic motion disabled.
+
+## Albird roster addition — 19 October 2026
+
+User supplied Albird's name and transparent arms-crossed photograph and requested inclusion in both the MPL SG card roster and the team composition above it. Seven players now render, retaining the existing six-player order and appending Albird. SingaporeLineup distributes positions and layers from the roster count, centered for an odd or even lineup; its decorative hero instance uses the same roster. Original photograph and processing record are archived under docs/sources/mpl. Production asset uses the same upper-46% crop as the existing arms-crossed portraits. No lane role is inferred. Esports remains static.

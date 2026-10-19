@@ -1,7 +1,8 @@
 export const site = {
   name: 'Lefaucheux Esports', shortName: 'LFX',
   email: 'lefaucheux.esports@gmail.com', phone: '+65 8776 3403',
-  phoneHref: '+6587763403', instagram: '@lefaucheux.esports', tiktok: '@LFXEsports',
+  phoneHref: '+6587763403', whatsapp: 'https://wa.me/6587763403',
+  instagram: '@lefaucheux.esports', tiktok: '@LFXEsports',
 };
 export const navigation = [
   ['Home', '/'], ['Profile', '/profile/'], ['Esports', '/esports/'],
@@ -12,5 +13,5 @@ export const interests = [
   ['sponsors', 'Sponsorship'], ['collaboration', 'Collaboration'], ['partnership', 'Partnership'],
   ['tournaments', 'Tournaments'], ['academy', 'LFX Academy MLBB'],
   ['website-basic', 'Website — Basic'], ['website-standard', 'Website — Standard'],
-  ['website-premium', 'Website — Premium'], ['jersey', 'Jersey'],
+  ['website-premium', 'Website — Premium'], ['jersey', 'Custom jerseys'],
 ] as const;
