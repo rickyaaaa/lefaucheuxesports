@@ -1,6 +1,6 @@
 export const site = {
   name: 'Lefaucheux Esports', shortName: 'LFX',
-  email: 'lefaucheux.esports@gmail.com', phone: '+65 8776 3403',
+  email: 'lefaucheuxesports@gmail.com', phone: '+65 8776 3403',
   phoneHref: '+6587763403', whatsapp: 'https://wa.me/6587763403',
   instagram: '@lefaucheux.esports', tiktok: '@LFXEsports',
 };

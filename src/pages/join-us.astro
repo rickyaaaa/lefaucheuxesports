@@ -13,7 +13,7 @@ import { interests, site } from '../data/site';
     if(!select||!email)return;
     if(value && Array.from(select.options).some(option=>option.value===value)) select.value=value;
     const label=select.selectedOptions[0].textContent??'General inquiry';
-    email.href=`mailto:lefaucheux.esports@gmail.com?subject=${encodeURIComponent(`LFX inquiry — ${label}`)}&body=${encodeURIComponent('Hello LFX,\n\nMy name is: \nOrganization (optional): \n\nI would like to discuss '+label+'.\n\n')}`;
+    email.href=`mailto:lefaucheuxesports@gmail.com?subject=${encodeURIComponent(`LFX inquiry — ${label}`)}&body=${encodeURIComponent('Hello LFX,\n\nMy name is: \nOrganization (optional): \n\nI would like to discuss '+label+'.\n\n')}`;
   }
   updateInterest(new URLSearchParams(location.search).get('interest'));
   select?.addEventListener('change',()=>updateInterest());
