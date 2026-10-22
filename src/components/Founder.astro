@@ -1,0 +1,424 @@
+---
+import { Image } from 'astro:assets';
+import Atmosphere from './Atmosphere.astro';
+import founderImg from '../assets/founder/mohamad-shazrin.webp';
+---
+
+<section class="section founder" id="meet-founder" aria-labelledby="founder-title">
+  <Atmosphere variant="arena" />
+  <div class="container founder-container">
+    <!-- Desktop Left Column / Mobile Top: Founder Portrait -->
+    <div class="founder-visual">
+      <div class="founder-frame">
+        <div class="frame-corners" aria-hidden="true">
+          <span class="corner corner--tl"></span>
+          <span class="corner corner--tr"></span>
+          <span class="corner corner--bl"></span>
+          <span class="corner corner--br"></span>
+        </div>
+        <div class="founder-image-wrapper">
+          <Image
+            src={founderImg}
+            alt="Mohamad Shazrin bin Abdullah, Founder & Owner of Lefaucheux Esports"
+            class="founder-portrait"
+            widths={[360, 480, 750]}
+            sizes="(max-width: 767px) 90vw, (max-width: 1024px) 45vw, 440px"
+            loading="lazy"
+            decoding="async"
+          />
+          <div class="founder-gradient-overlay" aria-hidden="true"></div>
+          <span class="founder-watermark" aria-hidden="true">LFX</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Desktop Right Column / Mobile Bottom: Founder Information -->
+    <div class="founder-info stack">
+      <div class="founder-header">
+        <span class="founder-eyebrow">
+          <span class="eyebrow-accent" aria-hidden="true"></span>
+          THE PERSON BEHIND LFX
+        </span>
+        <h2 id="founder-title" class="founder-heading">
+          MEET OUR <span class="crimson">FOUNDER.</span>
+        </h2>
+      </div>
+
+      <div class="founder-profile-card">
+        <h3 class="founder-name">Mohamad Shazrin bin Abdullah</h3>
+        <p class="founder-position">Founder & Owner — Lefaucheux Esports</p>
+        <div class="founder-divider" aria-hidden="true"></div>
+      </div>
+
+      <blockquote class="founder-quote">
+        <p>
+          "Behind Lefaucheux Esports is a vision to build a competitive and creative esports organization. With a commitment to growth, collaboration, and new opportunities, our founder aims to establish LFX as a platform where esports talent, innovation, and community come together."
+        </p>
+      </blockquote>
+
+      <div class="founder-pillars" aria-hidden="true">
+        <div class="pillar-tag">
+          <span class="pillar-dot"></span>
+          <span>GROWTH</span>
+        </div>
+        <div class="pillar-tag">
+          <span class="pillar-dot"></span>
+          <span>COLLABORATION</span>
+        </div>
+        <div class="pillar-tag">
+          <span class="pillar-dot"></span>
+          <span>OPPORTUNITY</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .founder {
+    position: relative;
+    background: var(--color-ink);
+    border-top: 1px solid var(--color-border-dark);
+    overflow: hidden;
+  }
+
+  .founder-container {
+    display: grid;
+    grid-template-columns: minmax(300px, 420px) minmax(0, 1fr);
+    gap: 72px;
+    align-items: center;
+  }
+
+  /* Founder Portrait Frame (Left Column) */
+  .founder-visual {
+    position: relative;
+    width: 100%;
+    animation: founderReveal 700ms var(--ease-lfx) both;
+  }
+
+  .founder-frame {
+    position: relative;
+    aspect-ratio: 3 / 4;
+    width: 100%;
+    max-width: 440px;
+    margin: 0 auto;
+    border-radius: var(--radius-card);
+    overflow: hidden;
+    background: #080808;
+    border: 1px solid var(--color-border-dark);
+    box-shadow: 0 16px 40px -12px rgba(0, 0, 0, 0.85);
+    transition: border-color var(--duration-normal) var(--ease-lfx),
+                box-shadow var(--duration-normal) var(--ease-lfx);
+  }
+
+  .founder-frame:hover {
+    border-color: rgba(226, 1, 45, 0.45);
+    box-shadow: 0 20px 48px -12px rgba(226, 1, 45, 0.18), 0 16px 40px -12px rgba(0, 0, 0, 0.9);
+  }
+
+  /* Thin Red Accent Corners */
+  .frame-corners {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 5;
+  }
+
+  .corner {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border: 2px solid transparent;
+    transition: all 400ms var(--ease-lfx);
+  }
+
+  .corner--tl {
+    top: 10px;
+    left: 10px;
+    border-top-color: var(--color-crimson);
+    border-left-color: var(--color-crimson);
+  }
+
+  .corner--tr {
+    top: 10px;
+    right: 10px;
+    border-top-color: rgba(226, 1, 45, 0.35);
+    border-right-color: rgba(226, 1, 45, 0.35);
+  }
+
+  .corner--bl {
+    bottom: 10px;
+    left: 10px;
+    border-bottom-color: rgba(226, 1, 45, 0.35);
+    border-left-color: rgba(226, 1, 45, 0.35);
+  }
+
+  .corner--br {
+    bottom: 10px;
+    right: 10px;
+    border-bottom-color: var(--color-crimson);
+    border-right-color: var(--color-crimson);
+  }
+
+  .founder-frame:hover .corner--tl,
+  .founder-frame:hover .corner--br {
+    width: 24px;
+    height: 24px;
+  }
+
+  .founder-frame:hover .corner--tr,
+  .founder-frame:hover .corner--bl {
+    border-color: var(--color-crimson);
+    width: 20px;
+    height: 20px;
+  }
+
+  /* Bottom animated accent bar */
+  .founder-frame:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--color-crimson);
+    transform: scaleX(0.25);
+    transform-origin: left;
+    transition: transform 450ms var(--ease-lfx);
+    z-index: 6;
+  }
+
+  .founder-frame:hover:after {
+    transform: scaleX(1);
+  }
+
+  .founder-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .founder-portrait {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+    display: block;
+    transition: transform var(--duration-image) var(--ease-lfx);
+  }
+
+  .founder-frame:hover .founder-portrait {
+    transform: scale(1.04);
+  }
+
+  .founder-gradient-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(8, 8, 8, 0.08) 0%,
+      transparent 35%,
+      rgba(8, 8, 8, 0.4) 70%,
+      rgba(8, 8, 8, 0.85) 100%
+    );
+    pointer-events: none;
+    z-index: 2;
+  }
+
+  .founder-watermark {
+    font-family: var(--font-display);
+    font-size: clamp(72px, 12vw, 120px);
+    position: absolute;
+    color: rgba(255, 255, 255, 0.04);
+    right: 14px;
+    bottom: 6px;
+    pointer-events: none;
+    z-index: 3;
+    line-height: 1;
+    user-select: none;
+  }
+
+  /* Founder Information (Right Column) */
+  .founder-info {
+    position: relative;
+    animation: founderReveal 700ms var(--ease-lfx) 150ms both;
+  }
+
+  .founder-header {
+    margin-bottom: 24px;
+  }
+
+  .founder-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: var(--color-crimson);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .eyebrow-accent {
+    width: 20px;
+    height: 2px;
+    background: var(--color-crimson);
+    display: inline-block;
+  }
+
+  .founder-heading {
+    font-size: clamp(34px, 4vw, 52px);
+    line-height: 1.15;
+  }
+
+  .founder-profile-card {
+    position: relative;
+    padding-bottom: 20px;
+  }
+
+  .founder-name {
+    font-family: var(--font-display);
+    font-size: clamp(26px, 2.8vw, 36px);
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    color: var(--color-white);
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+
+  .founder-position {
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: var(--color-crimson);
+    text-transform: uppercase;
+    margin-top: 6px;
+    line-height: 1.5;
+  }
+
+  .founder-divider {
+    width: 48px;
+    height: 2px;
+    background: var(--color-crimson);
+    margin-top: 16px;
+    transition: width 350ms var(--ease-lfx);
+  }
+
+  .founder-info:hover .founder-divider {
+    width: 88px;
+  }
+
+  .founder-quote {
+    position: relative;
+    margin: 0;
+    padding: 0 0 0 20px;
+    border-left: 2px solid rgba(226, 1, 45, 0.4);
+    transition: border-color 350ms var(--ease-lfx);
+  }
+
+  .founder-quote:hover {
+    border-left-color: var(--color-crimson);
+  }
+
+  .founder-quote p {
+    font-size: 15px;
+    line-height: 1.85;
+    color: var(--color-offwhite);
+    max-width: 62ch;
+  }
+
+  .founder-pillars {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-top: 8px;
+  }
+
+  .pillar-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--color-border-dark);
+    border-radius: var(--radius-control, 2px);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--color-text-muted);
+    transition: border-color 250ms var(--ease-lfx), color 250ms var(--ease-lfx);
+  }
+
+  .pillar-tag:hover {
+    border-color: rgba(226, 1, 45, 0.6);
+    color: var(--color-white);
+  }
+
+  .pillar-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--color-crimson);
+    flex-shrink: 0;
+  }
+
+  @keyframes founderReveal {
+    from {
+      opacity: 0;
+      transform: translateY(18px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .founder-container {
+      gap: 44px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .founder-container {
+      grid-template-columns: 1fr;
+      gap: 36px;
+    }
+
+    .founder-visual {
+      max-width: 340px;
+      margin: 0 auto;
+    }
+
+    .founder-quote {
+      padding-left: 16px;
+    }
+
+    .founder-quote p {
+      font-size: 14px;
+      line-height: 1.75;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .founder-visual,
+    .founder-info {
+      animation: none !important;
+      transform: none !important;
+    }
+
+    .founder-portrait,
+    .founder-frame,
+    .founder-frame:after,
+    .corner,
+    .founder-divider,
+    .founder-quote,
+    .pillar-tag {
+      transition: none !important;
+    }
+  }
+</style>

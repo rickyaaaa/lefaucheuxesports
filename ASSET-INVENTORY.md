@@ -65,3 +65,7 @@ Roster card replacements: Caanz_10.png, Nixie_06.png, PEKO_10.png, Saiko_10.png 
 ## Home Our Divisions photo — 16 October 2026
 
 User selected LFX_Team_05.png for the MPL Singapore division card on Home. Production copy: src/assets/team/mpl-home-05.webp, faithful alpha-bound trim and proportional resize to 1439x1600. The card contains the complete photograph so all faces remain visible. Original preserved at docs/sources/mpl/LFX_Team_05.png, with SHA-256/source metadata in home-team-05.json. This replacement is limited to the requested Home division card.
+
+## Meet Our Founder — 22 October 2026
+
+User explicitly requested adding the "Meet Our Founder" section to the Profile page featuring founder & owner Mohamad Shazrin bin Abdullah. Production copy: `src/assets/founder/mohamad-shazrin.webp` rendered at 3:4 aspect ratio with authentic features preserved from the company profile PDF page 5 management reference. Sidecar metadata recorded in `mohamad-shazrin.webp.json` and `src/assets/provenance.json`.
