@@ -69,3 +69,9 @@ User selected LFX_Team_05.png for the MPL Singapore division card on Home. Produ
 ## Meet Our Founder — 22 October 2026
 
 User explicitly requested adding the "Meet Our Founder" section to the Profile page featuring founder & owner Mohamad Shazrin bin Abdullah. Production copy: `src/assets/founder/mohamad-shazrin.webp` rendered at 3:4 aspect ratio with authentic features preserved from the company profile PDF page 5 management reference. Sidecar metadata recorded in `mohamad-shazrin.webp.json` and `src/assets/provenance.json`.
+
+## Management photos and tournament news — 16 November 2026
+
+The client supplied four management portraits and gave each one's name and role in its filename: Admin Neng Resna Wulandari, Marketing Ismatul Maula Nawang, Ladies Team Manager M Charies Esa P and Ladies Team Coach Zulfi Nasrulllah (published as "Nasrullah" because the triple "l" appears to be a typo; still to be confirmed). The client asked for these to be published on the website. They appear in `Management.astro` on the Profile page, below the founder. Originals are preserved unchanged in `docs/sources/management/`.
+
+The official LFX × Arfer Studio tournament poster and caption are published as a Partnership news article. The poster gives the registration close as 13:00 and the caption gives 17:00 WIB; the article follows the caption.

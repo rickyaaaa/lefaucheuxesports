@@ -46,7 +46,7 @@ await page.goto(base+'/esports/');
 assert.ok(parseFloat(await page.locator('.player-card img').first().evaluate(el=>getComputedStyle(el).transitionDuration))<.01,'Reduced motion not respected');
 for(const interest of ['website-basic','website-standard','website-premium','jersey','academy','tournaments']){
   await page.goto(base+`/join-us/?interest=${interest}`);assert.equal(await page.locator('#interest').inputValue(),interest);
-  const href=await page.locator('#email-enquiry').getAttribute('href');assert.ok(href.startsWith('mailto:lefaucheux.esports@gmail.com?'));
+  const href=await page.locator('#email-enquiry').getAttribute('href');assert.ok(href.startsWith('mailto:lefaucheuxesports@gmail.com?'));
   assert.ok(decodeURIComponent(href).includes(await page.locator('#interest option:checked').textContent()));
 }
 await page.goto(base+'/join-us/?interest=untrusted');assert.equal(await page.locator('#interest').inputValue(),'sponsors');

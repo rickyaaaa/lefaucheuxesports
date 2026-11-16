@@ -1,0 +1,201 @@
+---
+import { Image } from 'astro:assets';
+import Atmosphere from './Atmosphere.astro';
+import resna from '../assets/management/resna-wulandari.webp';
+import ismatul from '../assets/management/ismatul-maula-nawang.webp';
+import charies from '../assets/management/charies-esa.webp';
+import zulfi from '../assets/management/zulfi-nasrullah.webp';
+
+const people = [
+  { name: 'Neng Resna Wulandari', role: 'Admin', image: resna },
+  { name: 'Ismatul Maula Nawang', role: 'Marketing', image: ismatul },
+  { name: 'M Charies Esa P', role: 'Manager', team: 'Ladies Team', image: charies },
+  { name: 'Zulfi Nasrullah', role: 'Coach', team: 'Ladies Team', image: zulfi },
+];
+---
+
+<section class="section management" id="management" aria-labelledby="management-title">
+  <Atmosphere variant="signal" />
+  <div class="container">
+    <div class="management-header">
+      <span class="management-eyebrow"><span class="eyebrow-accent" aria-hidden="true"></span>THE PEOPLE BEHIND LFX</span>
+      <h2 id="management-title">MANAGEMENT <span class="crimson">&amp; STAFF.</span></h2>
+    </div>
+    <ul class="management-grid" role="list">
+      {people.map((person) => (
+        <li class="member">
+          <div class="member-frame">
+            <Image
+              src={person.image}
+              alt={`${person.name}, ${person.role}${person.team ? ` — ${person.team}` : ''} at Lefaucheux Esports`}
+              class="member-photo"
+              widths={[280, 420, 600]}
+              sizes="(max-width: 767px) 45vw, (max-width: 1024px) 30vw, 290px"
+              loading="lazy"
+              decoding="async"
+            />
+            <span class="member-corner" aria-hidden="true"></span>
+          </div>
+          <p class="member-role">{person.role}{person.team && <span> · {person.team}</span>}</p>
+          <h3 class="member-name">{person.name}</h3>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>
+
+<style>
+  .management {
+    position: relative;
+    border-top: 1px solid var(--color-border-dark);
+    overflow: hidden;
+  }
+
+  .management-header {
+    margin-bottom: 48px;
+  }
+
+  .management-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: var(--color-crimson);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .eyebrow-accent {
+    width: 20px;
+    height: 2px;
+    background: var(--color-crimson);
+    display: inline-block;
+  }
+
+  .management-header h2 {
+    font-size: clamp(34px, 4vw, 52px);
+    line-height: 1.15;
+  }
+
+  .management-grid {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 28px;
+  }
+
+  .member-frame {
+    position: relative;
+    aspect-ratio: 3 / 4;
+    border-radius: var(--radius-card);
+    overflow: hidden;
+    background: #080808;
+    border: 1px solid var(--color-border-dark);
+    transition: border-color var(--duration-normal) var(--ease-lfx);
+  }
+
+  .member-frame::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 3px;
+    background: var(--color-crimson);
+    transform: scaleX(0.25);
+    transform-origin: left;
+    transition: transform 450ms var(--ease-lfx);
+  }
+
+  .member:hover .member-frame {
+    border-color: rgba(226, 1, 45, 0.45);
+  }
+
+  .member:hover .member-frame::after {
+    transform: scaleX(1);
+  }
+
+  .member-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    transition: transform var(--duration-image) var(--ease-lfx);
+  }
+
+  .member:hover .member-photo {
+    transform: scale(1.04);
+  }
+
+  .member-corner {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 16px;
+    height: 16px;
+    border-top: 2px solid var(--color-crimson);
+    border-left: 2px solid var(--color-crimson);
+    pointer-events: none;
+  }
+
+  .member-role {
+    margin-top: 18px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--color-crimson);
+    text-transform: uppercase;
+  }
+
+  .member-role span {
+    color: var(--color-text-muted);
+  }
+
+  .member-name {
+    margin-top: 6px;
+    font-family: var(--font-display);
+    font-size: clamp(20px, 1.8vw, 24px);
+    font-weight: 400;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: var(--color-white);
+  }
+
+  @media (max-width: 1024px) {
+    .management-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 767px) {
+    .management-header {
+      margin-bottom: 32px;
+    }
+
+    .management-grid {
+      gap: 24px 16px;
+    }
+
+    .member-role {
+      margin-top: 12px;
+      font-size: 10px;
+    }
+
+    .member-name {
+      font-size: 18px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .member-photo,
+    .member-frame,
+    .member-frame::after {
+      transition: none !important;
+    }
+  }
+</style>
