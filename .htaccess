@@ -2,3 +2,19 @@
 DirectoryIndex index.html
 Options -Indexes
 ErrorDocument 404 /404.html
+
+# Security headers.
+# All scripts are same-origin files (astro.config.mjs disables script inlining),
+# so script-src 'self' needs no hashes. JSON-LD blocks are data, not scripts.
+# Inline <style> blocks from Astro need style-src 'unsafe-inline'.
+# If a third-party embed (YouTube, Instagram, analytics) is added later,
+# add its origin to the matching directive below or it will be blocked.
+<IfModule mod_headers.c>
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; require-trusted-types-for 'script'; upgrade-insecure-requests"
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+  Header always set Cross-Origin-Opener-Policy "same-origin"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=(), usb=()"
+</IfModule>
