@@ -119,6 +119,10 @@ function setupHomeMotion() {
         } else {
           onArrival(divisions, 0.1);
         }
+        onArrival(select('.home-news .section-top'));
+        const stories = select('.home-news-card');
+        if (mobile) stories.forEach((card) => onArrival([card]));
+        else onArrival(stories, 0.1);
         onArrival(select('.vision .split > .stack'), 0, mobile ? 10 : 16);
         onArrival(select('.vision .goals'), 0, mobile ? 10 : 16);
         onArrival(select('.join-banner > .container'), 0, mobile ? 8 : 12);
